@@ -1,0 +1,166 @@
+.root {
+  margin-top: -6px;
+  padding: 40px 0 0 0;
+  background-color: #FFC107;
+  position: relative;
+
+  .container {
+    max-width: 1440px;
+    padding: 0 20px 80px;
+    margin: 0 auto;
+    @media screen and (max-width: 1024px){
+      padding: 0 20px 60px;
+    }
+    @media screen and (max-width: 768px){
+      padding: 0 20px 40px;
+    }
+  }
+
+  span {
+    font-weight: 500;
+  }
+
+  .btnsBlock {
+    padding-top: 120px;
+    position: relative;
+    max-width: 660px;
+    height: 102px;
+    font-size: 32px;
+    button {
+      height: 100%;
+      padding-left: 52px;
+      text-transform: uppercase;
+      font-size: inherit;
+      text-align: left;
+      font-weight: 400;
+
+      &::before {
+        position: absolute;
+        right: 70px;
+        content: url("../../../../images/btnArrow.svg");
+      }
+    }
+    @media screen and (max-width: 1440px){
+      padding-top: 100px;
+      max-width: 440px;
+      font-size: 26px;
+      height: 80px;
+    }
+    @media screen and (max-width: 1024px){
+      padding-top: 80px;
+      max-width: 340px;
+      font-size: 20px;
+      height: 60px;
+      button{
+        &::before {
+          right: 30px;
+        }
+      }
+    }
+    @media screen and (max-width: 768px){
+      font-size: 16px;
+      height: 55px;
+      max-width: 210px;
+      button{
+        padding-left: 10px;
+        &::before {
+          right: 10px;
+        }
+      }
+    }
+    @media screen and (max-width: 450px){
+      font-size: 12px;
+      height: 47px;
+      max-width: 186px;
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: -200px;
+    right: 0;
+    @media screen and (max-width: 1550px){
+      width: 603px;
+      height: 486px;
+    }
+    @media screen and (max-width: 1440px){
+      border-radius: 50px 0 0 50px;
+    }
+    @media screen and (max-width: 1220px){
+      width: 390px;
+      height: 286px;
+      bottom: -100px;
+    }
+    @media screen and (max-width: 768px){
+      width: 150px;
+      height: 150px;
+      bottom: -50px;
+    }
+    @media screen and (max-width: 768px){
+      width: 100px;
+      height: 135px;
+
+      bottom: -50px;
+    }
+  }
+
+}
+
+.btnContainer {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 10px auto 0;
+  height: 102px;
+  font-size: 32px;
+  button {
+    font-size: inherit;
+    position: relative;
+    max-width: 660px;
+    height: 100%;
+    padding-left: 52px;
+    text-transform: uppercase;
+
+    text-align: left;
+    font-weight: 400;
+    &::before {
+      position: absolute;
+      right: 70px;
+      content: url("../../../../images/btnArrowBlack.svg");
+    }
+  }
+  @media screen and (max-width: 1440px){
+    font-size: 26px;
+    height: 80px;
+    button{
+      max-width: 440px;
+    }
+  }
+  @media screen and (max-width: 1024px){
+    font-size: 20px;
+    height: 60px;
+    button{
+      max-width: 340px;
+      &::before {
+        right: 30px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px){
+    font-size: 16px;
+    height: 55px;
+    button{
+      padding-left: 10px;
+      max-width: 210px;
+      &::before {
+        right: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 450px){
+    font-size: 12px;
+    height: 47px;
+    button{
+      max-width: 186px;
+    }
+  }
+}

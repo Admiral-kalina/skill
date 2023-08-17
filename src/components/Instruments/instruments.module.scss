@@ -1,0 +1,957 @@
+.root {
+  padding-top: 120px;
+
+  a {
+    text-decoration: underline;
+  }
+
+  button {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .container {
+    max-width: 1530px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .containerBox {
+    max-width: 1600px;
+    padding: 0 100px;
+    margin: 0 auto;
+    @media screen and (max-width: 900px) {
+      padding: 0 35px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  span {
+    font-weight: 400;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  .hero {
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    .btnBlock {
+      margin: 90px 0 0 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      max-width: 561px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      button {
+        max-width: 400px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .btnBlock {
+        margin: 40px 0 0 0;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      button {
+        max-width: 300px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .btnBlock {
+        margin-top: 10px;
+      }
+      button {
+        text-align: center;
+        max-width: 200px;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      button {
+        max-width: 120px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .instruments {
+    .instrumentsTitle {
+      margin: 180px 0 0 0;
+      color: #B90B0B;
+    }
+
+    .row {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      column-gap: 140px;
+    }
+
+    .column {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: #DFDFDF;
+        width: 6px;
+        height: calc(80% - 70px);
+        border-radius: 100px;
+        left: -40px;
+        top: 70px;
+      }
+
+      .title {
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+
+    ol {
+      padding: 0 0 0 20px;
+      max-width: 686px;
+
+      li {
+        list-style: auto;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .instrumentsTitle {
+        margin: 90px 0 0 0;
+        color: #B90B0B;
+      }
+      .row {
+        margin-top: 50px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .row {
+        column-gap: 35px;
+        padding: 0 20px;
+      }
+      .column {
+        &:before {
+          left: -20px;
+          height: 200px;
+          top: 50px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .row {
+        margin-top: 20px;
+      }
+      .instrumentsTitle {
+        margin-top: 36px;
+      }
+    }
+  }
+
+  .bonus {
+    position: relative;
+    z-index: 2;
+    margin-top: 85px;
+
+    .container {
+    }
+
+    .innerContainer {
+      border-radius: 50px;
+      background-color: #E1FAFA;
+      padding: 60px 57px 155px 57px;
+
+    }
+
+    .bonusContent {
+      position: relative;
+    }
+
+    .girlTop {
+      top: -320px;
+      left: 130px;
+      position: absolute;
+    }
+
+    .title {
+      margin: 0;
+      padding: 0 0 0 90px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .subTitle {
+      margin: 0;
+      padding: 0 0 0 90px;
+      text-align: left;
+    }
+
+    .row {
+      margin-top: 80px;
+      display: flex;
+      justify-content: end;
+      column-gap: 100px;
+    }
+
+    .column {
+
+    }
+
+    .columnLeft {
+
+    }
+
+    .columnRight {
+      max-width: 740px;
+    }
+
+    @media screen and (max-width: 1560px) {
+      .title {
+        padding: 0;
+      }
+      .subTitle {
+        padding: 0;
+      }
+    }
+    @media screen and (max-width: 1440px) {
+      .girlTop {
+        left: 30px;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      .girlTop {
+        top: -270px;
+        transform: scale(0.7);
+      }
+
+      .row {
+        column-gap: 50px;
+      }
+
+      .columnLeft {
+        img {
+          width: 301px;
+          height: 402px;
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .row {
+        justify-content: center;
+      }
+      .columnLeft {
+        img {
+          width: 224px;
+          height: 303px;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+      .innerContainer {
+        padding: 45px 57px 52px 57px;
+      }
+      .girlTop {
+        top: -232px;
+        left: -97px;
+        transform: scale(0.3);
+      }
+      .row {
+        margin-top: 20px;
+        column-gap: 20px;
+      }
+      .title {
+        font-size: 12px;
+      }
+      .subTitle {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+
+      .columnLeft {
+        img {
+          margin-top: 45px;
+          width: 94px;
+          height: 106px;
+          border-radius: 100%;
+        }
+      }
+      .columnRight {
+        max-width: 350px;
+      }
+      .btnBlock {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .columnRight {
+        max-width: 180px;
+      }
+    }
+  }
+
+  .program {
+    .title {
+      color: #B90B0B;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    ol {
+      margin: 0;
+      padding: 0 57px 0 92px;
+    }
+
+    li {
+      margin-top: 20px;
+      list-style: inherit;
+      font-weight: 300;
+    }
+
+    .bg {
+      background-image: url("../../images/instruments/bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.10), 0px 30px 30px 0px rgba(0, 0, 0, 0.10) inset;
+      position: relative;
+      margin-top: 250px;
+    }
+
+    .container {
+      position: relative;
+      top: -250px;
+    }
+
+    .mainContent {
+      padding: 70px 0 220px 0;
+      margin-top: -50px;
+      background-color: #ECEAE5;
+    }
+
+    .additionalContent {
+      box-sizing: border-box;
+      margin: -125px 20px 0 auto;
+      padding: 42px 55px 120px 65px;
+      max-width: 927px;
+      background-color: #BAB2A2;
+
+      p {
+        margin: 0;
+        font-weight: 400;
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      .additionalContent {
+        max-width: 808px;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      .additionalContent {
+        max-width: 708px;
+        padding: 32px 45px 100px 55px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .additionalContent {
+        max-width: 608px;
+        padding: 20px 35px 60px 35px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      ol {
+        padding: 0 30px 0 35px
+      }
+      .additionalContent {
+        border-radius: 10px;
+        max-width: 408px;
+        padding: 15px 25px 40px 25px;
+
+        ul {
+          padding: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .additionalContent {
+        max-width: 300px;
+        padding: 15px 5px 10px 25px;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .additionalContent {
+        max-width: 250px;
+        padding: 15px 5px 10px 25px;
+      }
+    }
+  }
+
+  .whyNetherland {
+    margin: 135px 0 0 0;
+
+    h2 {
+      color: #000;
+      margin: 0 0 90px 0;
+    }
+
+    .preview {
+      max-width: 1452px;
+    }
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin: 80px 0 0 0;
+      h2 {
+        margin: 0 0 60px 0;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      margin: 50px 0 0 0;
+      h2 {
+        display: none;
+      }
+    }
+  }
+
+  .aboutCourse {
+    background-color: #ECEAE5;
+    margin: 120px 0 0 0;
+
+    .block {
+      margin: 0 35px;
+      padding: 0 90px;
+      border-radius: 0 0 50px 50px;
+      background: #FFF;
+      box-shadow: 6px 4px 23px 0 rgba(0, 0, 0, 0.25);
+
+      p {
+        text-align: center;
+      }
+
+      .rowTop {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-column-gap: 60px;
+      }
+
+      .rowBottom {
+        display: grid;
+        grid-template-columns:1fr  1fr;
+        grid-column-gap: 120px;
+
+        .columnFirst {
+          max-width: 595px;
+        }
+
+        .columnSecond {
+          max-width: 552px;
+        }
+
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding: 0 50px;
+        .rowTop {
+          grid-column-gap: 45px;
+
+        }
+        .rowBottom {
+          grid-column-gap: 80px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 11px;
+        .rowTop {
+          grid-column-gap: 25px;
+
+        }
+        .rowBottom {
+          grid-column-gap: 40px;
+        }
+        margin: 0 -20px;
+        padding: 0 30px;
+        border-radius: 0;
+        background: #FFF;
+        box-shadow: none;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 10px;
+        .rowTop {
+          grid-column-gap: 15px;
+
+        }
+        .rowBottom {
+          grid-column-gap: 20px;
+        }
+        padding: 0 20px;
+      }
+
+
+    }
+
+    .course {
+
+      .title {
+        color: #A60000;
+        font-weight: 400;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 60px;
+      }
+
+      img {
+        align-items: center;
+        width: 100%;
+        height: auto;
+      }
+
+      .column {
+      }
+
+      li {
+        position: relative;
+        padding: 32px 0 32px 60px;
+
+        &:before {
+          width: 64px;
+          height: 64px;
+          top: 20px;
+          left: -20px;
+          position: absolute;
+        }
+      }
+
+      .liFirst {
+        &:before {
+          content: url("../../images/instruments/course1.png");
+        }
+      }
+
+      .liSecond {
+        &:before {
+          content: url("../../images/instruments/course2.png");
+        }
+      }
+
+      .liThird {
+        &:before {
+          content: url("../../images/instruments/course3.png");
+        }
+      }
+
+      .liFourth {
+        &:before {
+          padding: 0 0 0 16px;
+          width: 32px;
+          height: 32px;
+          content: url("../../images/instruments/course4.png");
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .row {
+          grid-column-gap: 30px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        background-color: #FFF7EE;
+        margin: 0 -20px;
+        padding: 0 20px;
+        .title {
+          margin: 0;
+          padding-top: 33px;
+        }
+        .row {
+          grid-template-columns: 1fr;
+        }
+        img {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 80px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 50px;
+    }
+    @media screen and (max-width: 425px) {
+      margin-top: 35px;
+    }
+  }
+
+  .team {
+    margin-top: 144px;
+    display: block;
+
+    .title {
+      text-align: center;
+    }
+
+    .row {
+      margin-top: 144px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 90px;
+    }
+
+    .column {
+      text-align: center;
+      max-width: 442px;
+
+      img {
+        max-width: 357px;
+        max-height: 368px;
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.10), 0 30px 30px 0 rgba(0, 0, 0, 0.10) inset;
+      }
+    }
+
+    .additionalContent {
+      margin-top: 50px;
+
+      .block {
+        margin: 0 0 0 auto;
+        max-width: 940px;
+        width: auto;
+      }
+
+      p {
+        margin: 0;
+        background-color: #00AEAC;
+        padding: 40px 220px 60px 80px;
+        color: #FFF;
+        max-width: 650px;
+        font-style: italic;
+        font-weight: 400;
+        border-radius: 30px;
+      }
+
+      .btnBlock {
+        margin: -20px 0 0 auto;
+        max-width: 337px;
+
+        a {
+          color: #fff;
+          position: relative;
+
+          &:after {
+            content: '';
+            right: -40px;
+            top: 15px;
+            background-repeat: no-repeat;
+            background-image: url("../../images/btnArrow.svg");
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        button {
+          height: 102px;
+          text-align: left;
+          padding: 0 0 0 50px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          button {
+            height: 80px;
+            width: 220px;
+            margin: 0 0 0 auto;
+            padding: 0 0 0 30px;
+          }
+          a {
+            color: #fff;
+            position: relative;
+
+            &:after {
+              top: 8px;
+            }
+          }
+        }
+        @media screen and (max-width: 768px) {
+          a {
+            &:after {
+              display: none;
+            }
+          }
+          button {
+            text-align: center;
+            border-radius: 20px;
+            width: 102px;
+            height: 37px;
+            font-size: 12px;
+            padding: 0;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        p {
+          margin: 0 0 0 auto;
+          padding: 40px 60px 40px 60px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        p {
+          padding: 11px 14px 13px 17px;
+          max-width: 280px;
+
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 56px;
+      .title {
+        margin-bottom: 60px;
+      }
+      .row {
+        margin-top: 50px;
+        grid-column-gap: 50px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 56px;
+      .title {
+        margin-bottom: 40px;
+      }
+      .row {
+        margin-top: 30px;
+        grid-column-gap: 50px;
+      }
+      .column {
+        img {
+          width: 87px;
+          height: 132px;
+          border-radius: 400px;
+        }
+      }
+
+    }
+    @media screen and (max-width: 450px) {
+      margin-top: 36px;
+      .title {
+        margin-bottom: 25px;
+      }
+      .row {
+        margin-top: 13px;
+        grid-column-gap: 15px;
+      }
+    }
+  }
+
+  .details {
+    margin-top: 105px;
+    background: #ECEAE5;
+
+    .title {
+      font-weight: 500;
+      text-align: left;
+      color: #A60000;
+      margin: 0;
+      padding: 120px 0 60px 25px;
+    }
+
+    .box {
+      padding: 0 70px 0 120px;
+    }
+
+    .content {
+      padding: 40px 35px 70px 25px;
+      background-color: #fff;
+      border-radius: 50px;
+    }
+
+    .discount {
+      text-align: center;
+      color: #B90B0B;
+
+      span {
+        text-decoration: line-through;
+      }
+    }
+
+    .price {
+      text-align: center;
+      color: #B90B0B;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    .btnBlock {
+      a {
+        text-align: center;
+        color: #fff;
+        position: relative;
+
+        &:after {
+          content: '';
+          right: -40px;
+          top: 15px;
+          background-repeat: no-repeat;
+          background-image: url("../../images/btnArrow.svg");
+          display: block;
+          position: absolute;
+          width: 20px;
+          height: 24px;
+        }
+      }
+
+      button {
+        height: 102px;
+        text-align: center;
+      }
+    }
+
+    .comforterBlock {
+      margin-right: 200px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      img {
+      }
+
+      p {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      .comforterBlock {
+        margin-right: 150px;
+
+        img {
+          width: 277px;
+          height: 110px;
+        }
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      margin-top: 80px;
+      .content {
+        padding: 30px 25px 50px 20px;
+      }
+      .title {
+        padding: 60px 0 40px 25px;
+      }
+      .box {
+        padding: 0 35px 0 60px;
+      }
+      .btnBlock {
+        height: 80px;
+
+        a {
+          &:after {
+            top: 8px;
+          }
+        }
+      }
+      .comforterBlock {
+        margin-right: 100px;
+
+        img {
+          width: 166px;
+          height: 62px;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+      .discount {
+        text-align: left;
+      }
+      .price {
+        text-align: left;
+      }
+      .content {
+        padding: 25px 20px 30px 15px;
+        border-radius: 0;
+      }
+      .title {
+        padding: 30px 0 20px 15px;
+      }
+      .box {
+        padding: 0 15px 0 25px;
+      }
+      .btnBlock {
+        height: 50px;
+        max-width: 236px;
+
+        a {
+          font-size: 16px;
+
+          &:after {
+            top: -1px;
+          }
+        }
+      }
+      .comforterBlock {
+        margin-right: 50px;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      .btnBlock {
+        height: 40px;
+        max-width: 236px;
+
+        a {
+          line-height: 40px;
+          font-size: 12px;
+
+          &:after {
+            transform: scale(.6);
+            top: -4px;
+          }
+        }
+
+        .comforterBlock {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+

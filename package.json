@@ -14,11 +14,34 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
+  "proxy": "http://localhost:5000",
   "dependencies": {
+    "@mollie/api-client": "^3.7.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "clsx": "^1.2.1",
+    "dotenv": "^16.3.1",
+    "formik": "^2.4.3",
     "gatsby": "^5.11.0",
+    "gatsby-omni-font-loader": "^2.0.2",
+    "gatsby-plugin-layout": "^4.11.0",
+    "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-mdx": "^5.11.0",
     "gatsby-plugin-sass": "^6.11.0",
+    "gatsby-plugin-sitemap": "^6.11.0",
+    "i18next": "^23.4.4",
+    "i18next-browser-languagedetector": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.63.6"
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^13.1.2",
+    "react-phone-number-input": "^3.3.2",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.1",
+    "react-star-ratings": "^2.3.0",
+    "reset-css": "^5.0.1",
+    "sass": "^1.63.6",
+    "swiper": "^10.0.4",
+    "yup": "^1.2.0"
   }
 }

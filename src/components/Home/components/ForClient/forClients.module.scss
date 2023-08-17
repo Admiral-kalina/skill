@@ -1,0 +1,238 @@
+.root {
+  margin-top: 50px;
+
+}
+
+.container {
+  padding:0 15px;
+  max-width: 1510px;
+  margin: 0 auto;
+  @media(max-width:1540px){
+    max-width: 1280px;
+  }
+}
+
+.clientcontainer {
+  margin: 28px 0 0 0;
+  @media(max-width:768px){
+    margin-bottom: 16px;
+  }
+}
+
+.title {
+  color: #14183e;
+  font-weight: 400;
+  margin: 0;
+  @media(max-width:768px){
+    font-size:24px;
+    margin-bottom: 40px;
+  }
+}
+
+.revtitle {
+  color: #5e6282;
+  font-weight: 500;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  @media(max-width:1024px){
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  @media(max-width:768px){
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+}
+
+.content {
+
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  @media(max-width:1024px){
+  img{
+    width: 100px;
+    height: 100px;
+  }
+  }
+  @media(max-width:768px){
+      column-gap: 15px;
+  }
+}
+
+.clientpicture {
+  height: 195px;
+  width: 195px;
+  object-fit: cover;
+  @media(max-width:768px){
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+.description {
+  max-width: 1090px;
+  color: #5e6282;
+  font-size: 2.25rem;
+  font-weight: 300;
+  @media(max-width:1024px){
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  @media(max-width:768px){
+    font-size: 12px;
+  }
+}
+
+.youtube {
+  margin-top: 220px;
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .box{
+    padding: 100px 60px;
+    border-radius: 50px;
+    background: #00AEAC;
+    h2{
+      margin-bottom: 200px;
+    }
+    @media screen and (max-width: 1024px){
+      padding: 80px 40px;
+      h2{
+        margin-bottom: 100px;
+      }
+    }
+    @media screen and (max-width: 768px){
+      padding: 60px 20px;
+      h2{
+        text-align: center;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  h2{
+    margin: 0;
+    text-align: left;
+    color: #000;
+  }
+  .row {
+    display: table;
+    table-layout: fixed;
+    column-gap: 20px;
+
+    .column{
+      display: table-cell;
+      padding-left: 20px;
+      vertical-align: baseline;
+      .girl{
+        display: none;
+        position: absolute;
+        top: 0;
+        transform: translate(0, -53%);
+        @media screen and (max-width: 1024px){
+          transform: translate(0, -83%);
+        }
+      }
+      &:last-child {
+        position: relative;
+        .girl{
+          display: block;
+        }
+      }
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+
+  }
+  .comforterBlock {
+    text-align: left;
+    position: relative;
+    padding: 0 0 0 20px;
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+
+    p{
+      text-align: right;
+      margin: 0 200px 0 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url("../../../../images/home/youtubeVector.svg");
+      background-repeat: no-repeat;
+      width: 285.534px;
+      height: 333.604px;
+      right: -32px;
+      top: -100px;
+    }
+  }
+  @media screen and (max-width: 1440px){
+    .comforterBlock {
+      &::before {
+        transform: scale(.6);
+      }
+    }
+  }
+  @media screen and (max-width: 1024px){
+    margin-top: 100px;
+    .comforterBlock {
+      p{
+        margin: 0 150px 0 0;
+      }
+      &::before {
+        transform: scale(0.4);
+        top: -172px;
+        right: -92px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px){
+    margin-top: 50px;
+    .box{
+      border-radius: 20px;
+    }
+    .container{
+      padding: 0;
+    }
+    .comforterBlock {
+      p{
+        margin: 0 150px 0 0;
+      }
+      &::before {
+        transform: rotate(20deg) scale(0.3);
+        top: -167px;
+        right: -68px;
+      }
+    }
+  }
+  @media screen and (max-width: 450px){
+
+    .container{
+      padding: 0;
+    }
+    .box{
+      padding-bottom: 30px;
+    }
+    .comforterBlock {
+      p{
+        margin: 0 90px 0 0;
+      }
+      &::before {
+        transform: rotate(20deg) scale(0.2);
+        top: -169px;
+        right: -97px;
+      }
+    }
+  }
+}
+

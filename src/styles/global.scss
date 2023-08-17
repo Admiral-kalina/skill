@@ -1,0 +1,367 @@
+body {
+  font-family: 'Jost', sans-serif;
+  color: var(--main-white-text);
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+  }
+}
+
+
+h1 {
+  color: #FFF;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  color: #C0242A;
+  font-size: 96px;
+  font-weight: 500;
+  @media(max-width: 1440px) {
+    font-size: 86px;
+  }
+  @media(max-width: 1024px) {
+    font-size: 50px;
+  }
+  @media(max-width: 768px) {
+    font-size: 32px;
+  }
+  @media(max-width: 425px) {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  color: #DEE1EC;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
+button {
+  border: none;
+}
+
+@media(max-width: 1199px) {
+  h3 {
+    font-size: 48px;
+  }
+}
+
+@media(max-width: 992px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media(max-width: 769px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.textComf {
+  font-family: 'Comforter Brush', cursive;
+  font-size: 96px;
+  color: #C0242A;
+  white-space: nowrap;
+  @media screen and (max-width: 1440px) {
+    font-size: 52px ;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 24px;
+  }
+}
+
+.textComforter {
+  margin: 100px auto 0;
+  position: relative;
+  color: #C0242A;
+  max-width: 420px;
+  text-align: center;
+  font-family: 'Comforter Brush', cursive;
+  font-size: 96px;
+  font-weight: 400;
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url("../images/home/resultVector.svg");
+    width: 568px;
+    height: 252px;
+    top: 130px;
+    left: 10px;
+  }
+
+  @media screen and (max-width: 1440px) {
+    transform: scale(0.7);
+  }
+  @media screen and (max-width: 1024px) {
+    transform: scale(0.43);
+  }
+  @media screen and (max-width: 450px) {
+    transform: scale(0.31);
+    margin: 80px 0 0 0;
+  }
+}
+
+.text96{
+  margin: 0;
+  color: #C0242A;
+  font-size: 96px;
+  font-weight: 500;
+  @media(max-width: 1440px) {
+    font-size: 86px;
+  }
+  @media(max-width: 1024px) {
+    font-size: 50px;
+  }
+  @media(max-width: 768px) {
+    font-size: 32px;
+  }
+  @media(max-width: 425px) {
+    font-size: 24px;
+  }
+}
+
+.text64 {
+  color: #000;
+  text-align: center;
+  font-size: 64px!important;
+  font-weight: 400;
+  text-transform: uppercase;
+  @media(max-width: 1440px) {
+    font-size: 48px!important;
+  }
+  @media(max-width: 1024px) {
+    font-size: 36px!important;
+  }
+  @media(max-width: 768px) {
+    font-size: 24px!important;
+  }
+  @media(max-width: 425px) {
+    font-size: 14px!important;
+  }
+}
+
+.text48{
+  font-size: 48px;
+  @media(max-width: 1440px) {
+    font-size: 32px;
+  }
+  @media(max-width: 1024px) {
+    font-size: 24px;
+  }
+  @media(max-width: 768px) {
+    font-size: 18px;
+  }
+  @media(max-width: 425px) {
+    font-size: 12px;
+  }
+
+}
+
+.text40 {
+  color: #000;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  @media(max-width: 1440px) {
+    font-size: 28px;
+  }
+  @media(max-width: 1024px) {
+    font-size: 22px;
+  }
+  @media(max-width: 768px) {
+    font-size: 16px;
+  }
+  @media(max-width: 425px) {
+    font-size: 12px;
+  }
+}
+
+.text36 {
+  font-size: 36px;
+  font-weight: 400;
+  @media(max-width: 1440px) {
+    font-size: 26px !important;
+  }
+  @media(max-width: 1024px) {
+    font-size: 20px !important;
+  }
+  @media(max-width: 768px) {
+    font-size: 16px !important;
+  }
+  @media(max-width: 425px) {
+    font-size: 12px !important;
+  }
+}
+
+.text32 {
+  font-size: 32px;
+  font-weight: 300;
+  @media(max-width: 1440px) {
+    font-size: 24px;
+  }
+  @media(max-width: 1024px) {
+    font-size: 18px;
+  }
+  @media(max-width: 768px) {
+    font-size: 14px;
+  }
+  @media(max-width: 425px) {
+    font-size: 12px;
+  }
+}
+
+.text24{
+  font-size: 24px;
+  font-weight: 300;
+  @media(max-width: 1440px) {
+    font-size: 20px !important;
+  }
+  @media(max-width: 1024px) {
+    font-size: 18px !important;
+  }
+  @media(max-width: 768px) {
+    font-size: 14px !important;
+  }
+  @media(max-width: 425px) {
+    font-size: 12px !important;
+  }
+}
+
+.btnContainer {
+  padding: 0 20px;
+
+  button {
+    height: 102px;
+    position: relative;
+    font-size: 32px;
+    width: 660px;
+    padding-left: 52px;
+    text-transform: uppercase;
+    display: block;
+    text-align: left;
+    font-weight: 400;
+
+    &::before {
+      position: absolute;
+      right: 70px;
+      content: url("../images/btnArrow.svg");
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    button {
+      font-size: 26px;
+      height: 80px;
+      max-width: 440px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    button {
+      font-size: 20px;
+      height: 60px;
+      max-width: 340px;
+
+      &::before {
+        right: 30px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    button {
+      font-size: 16px;
+      height: 55px;
+      padding-left: 10px;
+      max-width: 210px;
+
+      &::before {
+        right: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    button {
+      font-size: 12px;
+      height: 47px;
+      max-width: 186px;
+    }
+  }
+}
+
+.price {
+  min-width: 104px;
+  color: #B90B0B;
+  font-family: 'Rubik', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @media screen and (max-width: 1560px) {
+    column-gap: 28px;
+    font-size: 36px;
+    min-width: 84px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 26px;
+    min-width: 60px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    min-width: 50px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+    min-width: 30px;
+  }
+}
+
+
+.PhoneInputCountry{
+  display: none;
+}
+
+.PhoneInputInput{
+  font-size: 24px;
+  @media(max-width: 1440px) {
+    font-size: 20px;
+  }
+  @media(max-width: 1024px) {
+    font-size: 18px;
+  }
+  @media(max-width: 768px) {
+    font-size: 14px;
+  }
+  @media(max-width: 425px) {
+    font-size: 12px;
+  }
+}

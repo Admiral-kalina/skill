@@ -1,0 +1,140 @@
+.row {
+  display: table;
+  table-layout: auto;
+
+  .column {
+    display: table-cell;
+    vertical-align: baseline;
+    padding: 0 10px;
+
+    .imgBlock {
+      position: relative;
+    }
+    .title{
+      font-size: 34px;
+    }
+
+    .girl {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -103px;
+      transform: translate(0, -83%);
+      @media screen and (max-width: 1024px) {
+        transform: translate(0, -83%);
+      }
+    }
+
+    .youTube {
+      display: none;
+      position: absolute;
+      top: -74px;
+      right: -49px;
+      width: 160px;
+      height: 180px;
+    }
+
+    &:nth-child(2n) {
+      max-width: 560px;
+
+      .bigPhoto {
+        height: 100%;
+      }
+    }
+
+    &:first-child {
+      max-width: 430px;
+
+      .bigPhoto {
+        height: 100%;
+        max-height: 420px;
+      }
+    }
+
+    &:last-child {
+      position: relative;
+      max-width: 430px;
+
+      .bigPhoto {
+        max-height: 420px;
+        height: 100%;
+      }
+
+      .girl {
+        display: block;
+      }
+
+      .youTube {
+        display: block;
+      }
+
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .column {
+      .youTube {
+        transform: scale(.5);
+        right: -61px;
+      }
+      &:first-child {
+        .bigPhoto {
+          max-width: 270px;
+          max-height: 260px;
+        }
+      }
+
+      &:last-child {
+        .bigPhoto {
+          max-width: 270px;
+          max-height: 260px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .column {
+      .youTube{
+        transform: scale(0.3);
+        right: -45px;
+        top: -85px;
+      }
+      &:first-child {
+        .bigPhoto {
+          max-width: 190px;
+          max-height: 160px;
+        }
+      }
+
+      &:last-child {
+        .bigPhoto {
+          max-width: 190px;
+          max-height: 160px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .column {
+      padding: 0 2px;
+      &:first-child {
+        .bigPhoto {
+          max-width: 100px;
+          max-height: 130px;
+        }
+      }
+
+      &:last-child {
+        .bigPhoto {
+          max-width: 100px;
+          max-height: 130px;
+        }
+      }
+    }
+  }
+}

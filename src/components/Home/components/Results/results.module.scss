@@ -1,0 +1,211 @@
+.root {
+  max-width: 1510px;
+  margin: 0 auto;
+  padding: 0 15px;
+  h3 {
+    margin-top: 150px;
+    text-align: center;
+    color: #000;
+    text-shadow: 4px 4px 75px 0 rgba(99, 175, 220, 0.31);
+    font-size: 64px;
+    font-weight: 400;
+    text-transform: uppercase;
+    @media screen and (max-width: 1440px) {
+      font-size: 46px;
+    }
+    @media screen and (max-width: 1024px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 20px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .columnFirst {
+      .circleFirst{
+        position: relative;
+        :before{
+          z-index: -1;
+          content: "";
+          top: calc(50% - 177px);
+          right: -50%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          height: 507px;
+          width: 531px;
+          position: absolute;
+          background-image: url("../../../../images/home/circleBg.png");
+        }
+      }
+      @media screen and (max-width: 500px) {
+        margin:  0 0 0 -70px;
+      }
+    }
+
+    .columnSecond {
+      margin: 86px 0 0 auto;
+      .circle{
+        margin: 0 0 0 auto;
+      }
+      @media screen and (max-width: 768px) {
+        margin: -20px 0 0 0;
+      }
+    }
+
+    .columnThird {
+      margin-top: 220px;
+      @media screen and (max-width: 1024px) {
+        margin-top: 70px;
+      }
+      @media screen and (max-width: 768px) {
+        margin-top: 30px;
+      }
+      @media screen and (max-width: 500px) {
+        margin:  20px 0 0 -70px;
+      }
+    }
+
+    .columnFourth {
+      margin-top: 10px;
+      @media screen and (max-width: 768px) {
+        margin:  -20px 0 0 0;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      margin:  -40px 0 0 0;
+    }
+  }
+
+  .column {
+    flex: 1 1 50%;
+    @media screen and (max-width: 1440px) {
+      transform: scale(0.7);
+      height: 340px;
+    }
+    @media screen and (max-width: 1024px) {
+      transform: scale(0.5);
+      height: 280px;
+      width: 300px;
+    }
+    @media screen and (max-width: 768px) {
+      transform: scale(0.3);
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  .circle {
+    width: 472px;
+    height: 478.908px;
+    border-radius: 50%;
+    background: #FFF7EE;
+  }
+
+  .title {
+    padding: 70px 0 0 0;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 380px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .text {
+    text-align: center;
+    padding: 20px 0 0 0;
+    max-width: 348px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .buttonsBlock{
+    position: absolute;
+    bottom: -70px;
+    right: 0;
+    width: 486px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 37px;
+    font-size: 24px;
+    button{
+      height: 100px;
+      text-transform: uppercase;
+    }
+    @media screen and (max-width: 1440px) {
+      width: 420px;
+      row-gap: 26px;
+      bottom: -90px;
+      font-size: 20px;
+      button{
+        height: 80px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      width: 310px;
+      row-gap: 26px;
+      bottom: -135px;
+      font-size: 16px;
+      button{
+        height: 60px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      width: 220px;
+      row-gap: 18px;
+      button{
+        height: 40px;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 10px;
+      width: 195px;
+      row-gap: 14px;
+      bottom: -110px;
+      button{
+        height: 24px;
+      }
+    }
+  }
+
+  .textComforter{
+    margin: 100px auto 0;
+    position: relative;
+    color: #C0242A;
+    max-width: 420px;
+    text-align: center;
+    font-family: 'Comforter Brush', cursive;
+    font-size: 96px ;
+    font-weight: 400;
+    white-space: nowrap;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url("../../../../images/home/resultVector.svg");
+      width:568px;
+      height:252px;
+      top: 130px;
+      left: 10px;
+    }
+    @media screen and (max-width: 1440px) {
+      transform: scale(0.7);
+    }
+    @media screen and (max-width: 1024px) {
+      transform: scale(0.43);
+    }
+    @media screen and (max-width: 450px) {
+      transform: scale(0.31);
+      margin: 80px 0 0 0;
+    }
+  }
+}

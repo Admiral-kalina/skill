@@ -1,0 +1,110 @@
+.root {
+  margin-top: 120px;
+
+  .title {
+    text-align: left;
+    text-transform: none;
+    margin: 0 0 40px 0;
+  }
+
+  .coursesRow {
+    display: flex;
+    flex-direction: column;
+    row-gap: 56px;
+    @media screen and (max-width: 1024px){
+      row-gap: 40px;
+    }
+    @media screen and (max-width: 768px) {
+      row-gap: 20px;
+    }
+  }
+
+  .orderNumber {
+    text-align: left;
+    text-shadow: 1.5px 1.5px 3px #000;
+    margin: 0;
+  }
+
+  .box {
+    padding: 40px 24px;
+    box-shadow: rgba(0, 0, 0, 0.49) 4px 8px 8px -9px;
+    border-radius: 0 0 26px 26px;
+    background: #FFF;
+  }
+
+  .name {
+    max-width: 370px;
+    color: #767E86;
+    font-weight: 300;
+  }
+
+  .priceBlock {
+    display: flex;
+    justify-content: space-between;
+    color: #B90B0B;
+    font-family: Rubik, serif;
+    padding-top: 25px;
+    align-items: center;
+    column-gap: 55px;
+    @media screen and (max-width: 1560px) {
+      column-gap: 20px;
+      button {
+        width: 184px;
+        height: 57px;
+        font-size: 12px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      img {
+        width: 80px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      img {
+        width: 60px;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+  .stars {
+    padding-top: 10px;
+
+    svg {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+
+  .totalPrice{
+    margin: 70px 0 0 25px;
+    font-family: Rubik,sans-serif;
+    text-align: left;
+    font-weight: 400;
+    text-transform: none;
+    @media screen  and (max-width: 1024px){
+      margin: 50px 0 0 25px;
+    }
+
+    @media screen  and (max-width: 768px){
+      margin: 40px 0 0 0;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 1024px){
+    margin-top: 80px;
+  }
+  @media screen and (max-width: 768px){
+    margin-top: 60px;
+  }
+  @media screen and (max-width: 768px){
+    margin-top: 40px;
+  }
+  @media screen and (max-width: 450px){
+    margin-top: 20px;
+  }
+}

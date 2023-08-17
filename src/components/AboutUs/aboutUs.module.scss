@@ -1,0 +1,360 @@
+.root {
+  a{
+    text-decoration: underline;
+  }
+  p {
+    color: #000;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  .container {
+    max-width: 1530px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding: 110px 35px 0 35px;
+
+    .title {
+      text-align: center;
+    }
+
+    span {
+      font-weight: 500;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .passport {
+    overflow: hidden;
+
+    padding: 120px 0 0 0;
+
+    .block {
+      background-image: url("../../images/aboutUs/bg.svg");
+      background-position: 0 -15%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .blue {
+      max-width: 1588px;
+      margin: 0 auto;
+      padding: 0 50px;
+
+      .box {
+        position: relative;
+        border-radius: 50px;
+        background: #006181;
+        box-shadow: 3px 2px 45px 0px rgba(0, 0, 0, 0.25);
+        padding: 146px 75px 75px 0;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0, -44%);
+      }
+
+      ul {
+        max-width: 1195px;
+        margin: 0 0 0 auto;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: -40px;
+          display: block;
+          border-radius: 100px;
+          background: #DFDFDF;
+          width: 9px;
+          height: 100%;
+        }
+      }
+
+      li {
+        font-weight: 400;
+        color: #fff;
+        list-style: disc;
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      padding-top: 80px;
+      .blue {
+        .box {
+          padding: 120px 75px 75px 0;;
+        }
+
+        img {
+          height: 312px;
+          width: 254px;
+        }
+
+        ul {
+          margin: 0 0 0 60px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 60px;
+      .blue {
+        .box {
+          padding: 65px 75px 50px;
+        }
+
+        img {
+          top: -160px;
+          transform: scale(.6);
+        }
+
+        ul {
+          margin: 0;
+
+          &:before {
+            left: -30px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .blue {
+        ul {
+          max-width: 500px;
+
+          &:before {
+            left: -20px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      padding-top: 40px;
+      .hero {
+        padding: 80px 35px 0 35px;
+      }
+      .blue {
+        padding: 0 20px;
+
+        ul {
+          margin: 0 0 0 40px;
+
+          &:before {
+            width: 5px;
+            left: -5px;
+          }
+        }
+
+        img {
+          right: -65px;
+          transform: scale(.4);
+        }
+
+        .box {
+          padding: 35px 15px 35px 0;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .blue {
+        img {
+          top: -155px;
+          right: -100px;
+          transform: scale(.3);
+        }
+      }
+    }
+
+
+    .team {
+      display: block;
+      margin: 125px 0 0 0;
+
+      .row {
+        display: grid;
+        grid-template-areas:
+        'a b'
+        'c c';
+        grid-column-gap: 100px;
+        grid-row-gap: 80px;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .name {
+        margin: 50px 0 0 0;
+        color: #B90B0B;
+        font-weight: 400;
+      }
+
+      .description {
+        margin-top: 14px;
+      }
+
+      .columnFirst {
+        grid-area: a;
+        max-width: 681px;
+      }
+
+      .columnSecond {
+        grid-area: b;
+        max-width: 718px;
+      }
+
+      .columnThird {
+        max-width: 1390px;
+        justify-self: center;
+        grid-area: c;
+
+        img {
+          width: calc(50% - 40px);
+          height: auto;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        margin-top: 70px;
+        .row {
+          grid-column-gap: 50px;
+          grid-row-gap: 40px;
+        }
+        .column {
+          img {
+            width: 60%;
+            height: auto;
+          }
+        }
+        .columnThird {
+          img {
+            width: calc(32.5% - 40px);
+            height: auto;
+          }
+        }
+        .row {
+          grid-column-gap: 50px;
+          grid-row-gap: 40px;
+        }
+        .name {
+          margin: 35px 0 0 0;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .name {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  .carousel {
+    .swiperSlide {
+      display: none;
+    }
+  }
+
+  .facts {
+    .block {
+      position: relative;
+    }
+
+    .title {
+      margin: 210px auto 0 auto;
+      max-width: 820px;
+      font-weight: 400;
+      color: #B90B0B;
+    }
+
+    ol {
+      padding: 0;
+      position: relative;
+      margin: 120px 0 0 40px;
+    }
+
+    li {
+      list-style: decimal;
+      font-weight: 400;
+    }
+
+    img {
+      position: absolute;
+      width: 510px;
+      height: 510px;
+      top: 0;
+      left: -115px;
+      transform: translate(10px, -100%);
+    }
+
+    .description{
+      padding: 0 0 0 39px;
+      font-weight: 400;
+    }
+
+    @media screen and (max-width: 1150px) {
+      img {
+        width: 408px;
+        height: 408px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .title{
+        margin-top: 100px;
+      }
+      ol{
+        margin-top: 100px;
+      }
+      img {
+        width: 306px;
+        height: 306px;
+        left: -80px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .title{
+        margin-top: 50px;
+      }
+      ol{
+        margin-top: 50px;
+      }
+      img {
+        width: 179px;
+        height: 179px;
+        left: -25px;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      ol{
+        margin: 50px 0 0 20px;
+      }
+      img{
+        width: 110px;
+        height: 110px;
+        left: -34px;
+      }
+      .description{
+        padding:  0 0 0 20px;
+      }
+    }
+    @media screen and (max-width: 550px) {
+    }
+  }
+}

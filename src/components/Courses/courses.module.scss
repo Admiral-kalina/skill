@@ -1,0 +1,188 @@
+.root {
+  padding-top: 150px;
+  margin-bottom: 380px;
+  @media  screen and (max-width: 1024px){
+    margin-bottom: 180px;
+  }
+  @media  screen and (max-width: 768px){
+    margin-bottom: 100px;
+  }
+  h2 {
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .containerSmall {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+
+  .redRoot{
+    margin-top: 170px;
+    .title {
+      text-align: center;
+      margin: 0;
+      color: #B90B0B!important;
+    }
+    .red {
+      margin-top: 110px;
+      background-color: #BE2930;
+
+    }
+  }
+
+  .content {
+    padding: 74px 0 125px;
+    margin: 120px 20px 0;
+    background-color: #BAB2A2;
+    border-radius: 0px 0px 100px 100px;
+    .row {
+      display: flex;
+    }
+  }
+
+  .grey {
+    position: relative;
+    max-width: 1670px;
+    margin: 0 auto;
+    .title{
+      color: #B90B0B;
+    }
+    .row {
+      justify-content: center;
+      column-gap: 50px;
+      padding-left: 80px;
+
+    }
+
+    .textBlock{
+      max-width: 586px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .buttonContainer{
+      width: 586px;
+      height: 102px;
+      button{
+        &::before{
+          content:url("../../images/btnArrowBlack.svg");
+
+        }
+      }
+    }
+
+    .imgLeft {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    .imgRight {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+    }
+
+    @media screen and (max-width: 1500px) {
+      .imgLeft {
+        width: 150px;
+      }
+      .imgRight {
+        width: 150px;
+      }
+    }
+    @media screen  and (max-width: 1440px){
+      .row {
+        column-gap: 20px;
+      }
+      .imgMain {
+        width: 235px;
+        height: 467px;
+      }
+      .imgLeft {
+        width: 105px;
+        height: 269px;
+      }
+      .imgRight {
+        width: 105px;
+        height: 269px;
+      }
+      .textBlock{
+        max-width: 486px;
+      }
+    }
+    @media screen  and (max-width: 1024px) {
+      .row {
+        padding-left: 0;
+      }
+      .imgMain {
+        width: 164px;
+        height: 327px;
+      }
+      .imgLeft {
+        width: 73.5px;
+        height: 189px;
+      }
+      .imgRight {
+        width: 73.5px;
+        height: 189px;
+      }
+      .textBlock{
+        max-width: 320px;
+      }
+    }
+    @media screen  and (max-width: 768px) {
+      .imgMain {
+        width: 111px;
+        height: auto;
+      }
+      .imgLeft {
+        width: 48px;
+        height: 156px;
+      }
+      .imgRight {
+        width: 48px;
+        height: 156px;
+      }
+      .textBlock{
+        max-width: 220px;
+      }
+      .buttonContainer{
+        display: none;
+      }
+    }
+    @media screen  and (max-width: 500px) {
+      .textBlock{
+        max-width: 190px;
+      }
+    }
+    @media screen  and (max-width: 450px) {
+      .textBlock{
+        padding-right: 15px;
+        max-width: 190px;
+      }
+    }
+  }
+
+  .youtube {
+    margin-top: 220px;
+    h2{
+      margin: 0;
+      text-align: left;
+      color: #000;
+    }
+  }
+
+}
+

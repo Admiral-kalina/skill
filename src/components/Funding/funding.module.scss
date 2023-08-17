@@ -1,0 +1,340 @@
+.root {
+  margin: 120px 0 350px 0 ;
+@media  screen and (max-width: 1024px){
+  margin: 100px 0 180px 0 ;
+}
+  @media  screen and (max-width: 768px){
+    margin: 100px 0 130px 0 ;
+  }
+  .container {
+    max-width: 1430px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .link {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  p {
+    padding: 20px 0 0 0;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  span {
+    font-weight: 500;
+  }
+
+  .textBlock {
+    padding: 0 20px 0 35px;
+
+    .subtitle {
+      padding: 30px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0 70px;
+      .subtitle {
+        padding: 15px 0 0;
+      }
+    }
+  }
+
+  .bgImage {
+    position: relative;
+    margin-top: 60px;
+    background-image: url("../../images/funding/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 280px;
+
+    .title {
+
+    }
+
+    .content {
+      position: relative;
+      top: -46px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 0px;
+      padding-bottom: 20px;
+      background-image: none;
+      .content {
+        position: relative;
+        top: 50%;
+      }
+      &::before {
+        position: absolute;
+        top: 40%;
+        display: block;
+        content: '';
+        background-color: red;
+        background-image: url("../../images/funding/bg.png");
+        width: 100%;
+        height: 60%;
+      }
+    }
+  }
+
+  .lightGray {
+    background-color: #FFF7EE;
+    border-radius: 50px 50px 0 0;
+    padding: 0 27px 15px;
+    @media screen and (max-width: 768px) {
+      background-color: transparent;
+      padding: 0 55px;
+    }
+  }
+
+  .blue {
+    filter: drop-shadow(4px 15px 34px rgba(0, 0, 0, 0.25));
+    background-color: #E3F5FE;
+    padding: 0 0 15px;
+
+    .textBlockFull {
+      padding: 0 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      border-radius: 50px 50px 0 0;
+      margin: 10px 20px 0;
+      background-color: #FFF7EE;
+    }
+  }
+
+  .bottom {
+    .darkGray {
+      background-color: #ECEAE5;
+      padding: 0 27px;
+      border-radius: 0 0 50px 50px;
+
+      .btns {
+        padding: 79px 0 59px;
+        display: flex;
+
+        .whiteBtn {
+          display: block;
+
+          button {
+            &:before {
+              content: url("../../images/btnArrowBlack.svg");
+            }
+          }
+        }
+
+        button {
+          text-transform: none;
+          white-space: nowrap;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      margin: 0 30px;
+      .darkGray {
+        padding: 0 27px 87px;
+
+        .btns {
+          justify-content: space-between;
+
+          .whiteBtn {
+            display: block;
+
+            button {
+              &:before {
+                display: block;
+                width: 12px;
+                height: 38px;
+                right: 15px;
+                top: 50%;
+                transform: translate(0, -37%);
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .darkGray {
+
+        .btns {
+          .btnContainer {
+            padding: 0;
+          }
+
+          button {
+            font-size: 18px;
+            max-width: 310px;
+          }
+
+          .whiteBtn {
+            display: block;
+
+            button {
+              &:before {
+                top: 53%;
+                transform: translate(0, -37%) scale(0.7);
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+      .container {
+        padding: 0;
+      }
+      .darkGray {
+        padding: 0 65px 85px;
+        background-color: #E3F5FE;
+        border-radius: 15px;
+
+        .btns {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  .book {
+    margin: 0 auto;
+    max-width: 1300px;
+
+    .bookContent {
+      padding: 0 0 0 324px;
+      position: relative;
+    }
+
+    .mainImg {
+
+    }
+
+
+    .bookTitle {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .girl {
+      position: absolute;
+      left: 0;
+    }
+
+    .vector {
+      position: absolute;
+      bottom: -250px;
+      right: 250px;
+    }
+
+    .comforterText {
+      position: absolute;
+      right: -65px;
+      bottom: -60px;
+    }
+
+    @media screen and (max-width: 1440px) {
+      .bookContent {
+        max-width: 600px;
+      }
+      .mainImg {
+        width: 556px;
+        height: 337px;
+      }
+      .vector {
+        width: 390px;
+        height: 120px;
+        bottom: -148px;
+        right: -35px;
+      }
+      .girl {
+        height: 406px;
+        width: 256px;
+        left: 135px;
+      }
+      .comforterText {
+        max-width: 600px;
+        right: -131px;
+        bottom: -4px;
+      }
+    }
+    @media screen and (max-width: 1100px) {
+      .bookContent {
+        padding: 0;
+        margin: 0 auto;
+      }
+      .girl {
+        left: -170px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .bookContent {
+        width: 450px;
+      }
+      .mainImg {
+        width: 428px;
+        height: 294px;
+      }
+      .girl {
+        height: 339px;
+        width: 210px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .bookContent{
+        width: 300px
+      }
+      .vector{
+        width: 250px;
+        height: 80px;
+        bottom: -80px;
+      }
+      .mainImg {
+        width: 300px;
+        height: 206px;
+      }
+      .girl{
+        height: 207px;
+        width: 122px;
+        left: -88px;
+        bottom: -30px;
+      }
+    }
+    @media screen and (max-width: 600px){
+      .bookContent{
+        width: 240px;
+      }
+      .mainImg{
+        width: 215px;
+        height: 153px;
+      }
+      .girl{
+        width: 101px;
+        height: 150px;
+      }
+      .comforterText{
+        right: -98px  ;
+      }
+    }
+    @media screen and (max-width: 450px){
+      .comforterText {
+        right: -55px;
+      }
+      .girl{
+        left: -70px;
+      }
+    }
+  }
+}

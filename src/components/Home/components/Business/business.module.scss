@@ -1,0 +1,113 @@
+.root {
+  margin: 120px auto 0;
+  background: #E3F5FE;
+  @media screen and (max-width: 1024px){
+    margin: 70px auto 0;
+  }
+  @media screen and (max-width: 768px){
+    font-size: 24px;
+    margin: 60px auto 0;
+  }
+  @media screen and (max-width: 450px){
+    margin: 45px auto 0;
+  }
+  .container{
+    max-width: 1582px;
+    margin: 0 auto;
+    padding: 130px 15px;
+    @media screen and (max-width: 1024px){
+      padding: 70px 15px;
+    }
+    @media screen and (max-width: 768px){
+      padding: 35px 15px;
+    }
+  }
+  .title {
+    color: #000;
+    text-align: center;
+    text-shadow: 4px 4px 75px 0 rgba(99, 175, 220, 0.31);
+    font-size: 64px;
+    font-weight: 400;
+    text-transform: uppercase;
+    @media screen and (max-width: 1440px) {
+      font-size: 46px;
+    }
+    @media screen and (max-width: 1024px){
+      font-size: 28px;
+    }
+    @media screen and (max-width: 768px){
+      font-size: 24px;
+    }
+    @media screen and (max-width: 450px){
+      font-size: 20px;
+    }
+  }
+
+  .description {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 46px;
+    span {
+      font-weight: 700;
+    }
+    @media screen and (max-width: 1440px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @media screen and (max-width: 1024px){
+      line-height: 24px;
+      font-size: 16px;
+    }
+    @media screen and (max-width: 768px){
+      font-size: 14px;
+    }
+    @media screen and (max-width: 450px){
+      font-size: 10px;
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    img{
+      width: 50%;
+    }
+    p {
+      padding: 0 0 0 40px;
+      font-size: 48px;
+      font-weight: 400;
+      @media screen and (max-width: 1440px) {
+        padding: 0 0 0 30px;
+        font-size: 30px;
+        line-height: 36px;
+      }
+      @media screen and (max-width: 1024px){
+        padding: 0 0 0 20px;
+        line-height: 24px;
+        font-size: 16px;
+      }
+      @media screen and (max-width: 768px){
+        font-size: 14px;
+        padding: 0 0 0 15px;
+      }
+      @media screen and (max-width: 450px){
+        font-size: 10px;
+      }
+    }
+  }
+
+  .cityFull{
+    position: absolute;
+    width: 100vw;
+    height: 127px;
+    @media screen and (max-width: 1024px){
+      height: 80px;
+    }
+    @media screen and (max-width: 768px){
+      height: 50px;
+    }
+    @media screen and (max-width: 450px){
+      height: 25px;
+    }
+  }
+}
