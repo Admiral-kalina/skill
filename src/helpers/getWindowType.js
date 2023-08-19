@@ -1,3 +1,5 @@
 export const getWindowType = () => {
-    return window.innerWidth <= 768;
+    if (typeof window !== "undefined" || window.document) {
+        return window.innerWidth <= 768;
+    }
 }

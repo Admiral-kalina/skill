@@ -24,9 +24,8 @@ const SwiperFeedback = () => {
     const swiperRef = useRef();
     const {feedbackSlides, isLoading, error} = useSelector(res => res.feedback)
     const dispatch = useDispatch()
-    console.log(window)
 
-    const isMobile = getWindowType()
+    const isMobile = true
 
     console.log('Large', isMobile)
 

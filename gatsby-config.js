@@ -1,11 +1,13 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
+
+
 module.exports = {
   siteMetadata: {
     title: `frontend`,
     siteUrl: `https://www.yourdomain.tld`
   },
+
+
+
   plugins: [
     "gatsby-plugin-layout",
     "gatsby-plugin-sass",
@@ -45,4 +47,6 @@ module.exports = {
       },
       __key: "pages"
     }]
+
+
 };
