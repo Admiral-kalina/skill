@@ -19,6 +19,19 @@ i18n
         resources: {
             en: {
                 translation: {
+                    header: {
+                        text1: 'Main',
+                        text2: 'Relocation',
+                        text3: 'Startup visa',
+                        text4: 'Orientation year',
+                        text5: 'Funding',
+                        text6: 'Cases',
+                        text7: 'Courses and workshops',
+                        text8:'Startup tools',
+                        text9: 'About us',
+                        text10:'Contacts',
+                        text11: 'Blog',
+                    },
                     home: {
                         title: 'Relocating businesses and individuals to the Netherlands.',
                         subtitle: {
@@ -559,25 +572,38 @@ i18n
                             btn2: 'Online workshop Grants and Subsidies',
                         }
                     },
-                    checkout:{
-                        text1:'Your order',
-                        text2:'Name*',
-                        text3:'Phone*',
-                        text4:'Address*',
-                        text5:'Email*',
-                        text6:'Goods in the cart:',
-                        text7:'Total amount:',
-                        text8:'',
+                    checkout: {
+                        text1: 'Your order',
+                        text2: 'Name*',
+                        text3: 'Phone*',
+                        text4: 'Address*',
+                        text5: 'Email*',
+                        text6: 'Goods in the cart:',
+                        text7: 'Total amount:',
+                        text8: '',
                     },
-                    footer:{
-                        text1:'Contacts',
-                        text2:'Write your e-mail...',
-                        text3:'Send',
+                    footer: {
+                        text1: 'Contacts',
+                        text2: 'Write your e-mail...',
+                        text3: 'Send',
                     }
                 }
             },//mayak
             ru: {
                 translation: {
+                    header: {
+                        text1: 'Главная ',
+                        text2: 'Релокация',
+                        text3: 'Стартап виза',
+                        text4: 'Стартап виза',
+                        text5: 'Финансирование',
+                        text6: 'Кейсы',
+                        text7: 'Курсы и мастер-классы',
+                        text8:'Инструменты для стартапа',
+                        text9: 'Про нас',
+                        text10:'Контакты',
+                        text11: 'Блог',
+                    },
                     home: {
                         title: 'Релокация в Нидерланды',
                         subtitle: {
@@ -1120,20 +1146,20 @@ i18n
                             btn2: 'Мастер класс Гранты и Субсидии',
                         }
                     },
-                    checkout:{
-                        text1:'Оформить заказ',
-                        text2:'Имя*',
-                        text3:'Телефон*',
-                        text4:'Адрес*',
-                        text5:'Электронная почта*',
-                        text6:'Товар в корзине:',
-                        text7:'Сумма',
-                        text8:'',
+                    checkout: {
+                        text1: 'Оформить заказ',
+                        text2: 'Имя*',
+                        text3: 'Телефон*',
+                        text4: 'Адрес*',
+                        text5: 'Электронная почта*',
+                        text6: 'Товар в корзине:',
+                        text7: 'Сумма',
+                        text8: '',
                     },
-                    footer:{
-                        text1:'Контакты',
-                        text2:'Напиши свою почту...',
-                        text3:'Отправить',
+                    footer: {
+                        text1: 'Контакты',
+                        text2: 'Напиши свою почту...',
+                        text3: 'Отправить',
                     }
                 }
             },

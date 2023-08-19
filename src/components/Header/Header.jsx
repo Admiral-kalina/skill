@@ -14,21 +14,23 @@ import logo from "./../../images/logo.png";
 import basket from "./../../images/shopping-bag.svg";
 import {changeUserLanguage} from "../../features/userSlice/userSlice";
 import i18n from "i18next";
+import {useTranslation} from "react-i18next";
 
 
 
 const Header = () => {
-    const dispatch = useDispatch()
+    const {t} = useTranslation();
+    const dispatch = useDispatch();
     const {language} = useSelector(store => store.user.user);
-    const {coursesList} = useSelector(store => store.user.user)
+    const {coursesList} = useSelector(store => store.user.user);
 
-    const ref = useRef()
-    const headerRef = useRef()
+    const ref = useRef();
+    const headerRef = useRef();
 
     const [hamburger, setHamburger] = useState(false);
-    const [isRelocationActive, setRelocationActive] = useState(false)
-    const [isCoursesActive, setCoursesActive] = useState(false)
-    const [isLanguageActive, setLanguageActive] = useState(false)
+    const [isRelocationActive, setRelocationActive] = useState(false);
+    const [isCoursesActive, setCoursesActive] = useState(false);
+    const [isLanguageActive, setLanguageActive] = useState(false);
 
     const languageVariant = language === 'RU' ? 'EN' : "RU"
 
@@ -69,7 +71,7 @@ const Header = () => {
                     </div>
                     <div ref={ref} className={`${styles.headerContent} ${hamburger ? styles.open : ''}`}>
                         <ul className={`${styles.navLinks}`}>
-                            <li className={`${hamburger ? styles.fade : ''}`}><Link className={styles.item} to="/">Главная </Link></li>
+                            <li className={`${hamburger ? styles.fade : ''}`}><Link className={styles.item} to="/">{t('header.text1')}</Link></li>
                             <li
                                 onMouseOver={() => handleRelocation(true)}
                                 onMouseLeave={() => handleRelocation(false)}
@@ -78,13 +80,13 @@ const Header = () => {
                                     className={styles.item}
                                     to="/relocation"
                                 >
-                                    Релокация
+                                    {t('header.text2')}
                                 </Link>
                                 <p className={`${styles.linksMenu} ${isRelocationActive ? styles.show : ''}`}>
-                                    <Link className={styles.item} to='/startupviza'>Стартап виза</Link>
-                                    <Link className={styles.item} to='/visa'>Виза - ориентационный год</Link>
-                                    <Link className={styles.item} to='/funding'>Финансирование</Link>
-                                    <Link className={styles.item} to='/cases'>Кейсы</Link>
+                                    <Link className={styles.item} to='/startupviza'>{t('header.text3')}</Link>
+                                    <Link className={styles.item} to='/visa'>{t('header.text4')}</Link>
+                                    <Link className={styles.item} to='/funding'>{t('header.text5')}</Link>
+                                    <Link className={styles.item} to='/cases'>{t('header.text6')}</Link>
                                 </p>
                             </li>
                             <li
@@ -95,15 +97,16 @@ const Header = () => {
                                     to="/courses"
                                     className={styles.item}
                                 >
-                                    Курсы и мастер-классы
+                                    {t('header.text7')}
                                 </Link>
                                 <p className={`${styles.linksMenu} ${isCoursesActive ? styles.show : ''}`}>
-                                    <Link className={styles.item} to='/instruments'>Инструменты для стартапа</Link>
+                                    <Link className={styles.item} to='/instruments'>{t('header.text8')}</Link>
                                 </p>
                             </li>
 
-                            <li className={`${hamburger ? styles.fade : ''}`}><Link className={styles.item} to="/aboutUs">Про нас</Link></li>
-                            <li className={`${hamburger ? styles.fade : ''}`}><Link className={styles.item} to="#">Блог</Link></li>
+                            <li className={`${hamburger ? styles.fade : ''}`}><Link className={styles.item} to="/aboutUs">{t('header.text9')}</Link></li>
+                            <li className={`${hamburger ? styles.fade : ''}`}><Link className={styles.item} to="/contacts">{t('header.text10')}</Link></li>
+                            <li className={`${hamburger ? styles.fade : ''}`}><Link className={styles.item} to="/blog">{t('header.text11')}</Link></li>
                             <li className={`${hamburger ? styles.fade : ''}`}
                                 onMouseOver={() => handleLanguage(true)}
                                 onMouseLeave={() => handleLanguage(false)}

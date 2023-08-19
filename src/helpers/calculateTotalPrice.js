@@ -1,3 +1,4 @@
 export const calculateTotalPrice = (courses) => {
-    return courses.reduce((acc, el, i) => acc += el.price ,0)
+   const totalPrice = courses.reduce((acc, el) => acc += el.price ,0)
+    return totalPrice.toFixed(2).toString()
 }

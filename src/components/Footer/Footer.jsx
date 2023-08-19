@@ -50,8 +50,6 @@ const Footer = ({withPlanes}) => {
                     console.log(error);
                 });
         }
-
-
     }
 
     return (

@@ -14,42 +14,40 @@ import {calculateTotalPrice} from "../../helpers/calculateTotalPrice";
 // styles
 import * as styles from "./checkout.module.scss";
 import {useTranslation} from "react-i18next";
+import {groupCheckoutItems} from "../../helpers/groupCheckoutItems";
+import {navigate} from "gatsby";
 
 
 const Checkout = () => {
     const {t} = useTranslation();
     const {coursesList} = useSelector(store => store.user.user)
-
     const dispatch = useDispatch()
 
     const handleRemove = () => {
         dispatch(removeUserCurse())
     }
-    const totalPrice = calculateTotalPrice(coursesList)
-    // const get = async () => {
-    //     // console.log('Triger')
-    //     // const response = await axios.post('http://localhost:5000/payment', {
-    //     //     amount: {
-    //     //         currency: 'EUR',
-    //     //         value: '100.00'
-    //     //     }
-    //     // })
-    //     // navigate(response.data)
-    //     //
-    //     // console.log(response)
-    //     // setPayLink(response.data)
-    //
-    // }
 
-    const payment = async () => {
-        console.log('payment')
+    const totalPrice = calculateTotalPrice(coursesList)
+    const checkoutItems = groupCheckoutItems(coursesList)
+
+
+    const createPayment = async (values) => {
+        console.log('payment',values)
         const response = await axios.post('http://localhost:5000/payment',{
             amount: {
                     value: totalPrice,
                     currency: "EUR"
                 },
+            metadata:{
+                checkoutItems,
+                name:values.name,
+                email:values.email,
+                address:values.address,
+                phone:values.phone,
+            }
         })
-        console.log(response)
+        console.log(response.data)
+        navigate(response.data)
     }
 
     return (
@@ -144,7 +142,7 @@ const Checkout = () => {
                                    <ProductsList totalPrice={totalPrice} coursesList={coursesList}/>
                                    <div className={styles.btnBlock}>
                                        <UIButton onClick={handleRemove} teal>Отменить</UIButton>
-                                       <UIButton type="submit" disabled={isSubmitting} onClick={payment} teal>Оплатить</UIButton>
+                                       <UIButton type="submit" disabled={isSubmitting} onClick={() => createPayment(values)} teal>Оплатить</UIButton>
                                    </div>
 
                                    {/*<button type="submit" disabled={isSubmitting}>*/}

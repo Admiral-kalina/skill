@@ -37,6 +37,9 @@
   .background{
    position: absolute;
     width: 100vw;
+    @media screen and (max-width: 768px){
+      display: none;
+    }
   }
   //background-image: url("../../images/feedbackVector.svg");
   //background-repeat: no-repeat;
