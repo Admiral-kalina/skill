@@ -26,7 +26,6 @@ export const CoursesList = () => {
     const [payLink, setPayLink] = useState('')
     const dispatch = useDispatch()
 
-
     useEffect(() => {
         dispatch(fetchCourses(language.toLowerCase()))
     }, [language])
@@ -87,7 +86,7 @@ const CoursesElement = ({attributes}) => {
                     <UIButton onClick={handleClick} teal>Добавить в корзину</UIButton>
                 </div>
             </div>
-            <img className={styles.preview} src={`http://localhost:1337${url}`} alt="course"/>
+            <img className={styles.preview} src={url} alt="course"/>
         </div>
     )
 }

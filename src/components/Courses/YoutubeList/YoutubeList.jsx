@@ -57,7 +57,7 @@ const YoutubeItem = ({attributes,mainPage}) => {
         <div className={styles.column}>
            <Link to={attributes.link}>
                <div className={styles.imgBlock}>
-                   <img className={styles.bigPhoto} src={`http://localhost:1337${url}`} alt="img"/>
+                   <img className={styles.bigPhoto} src={url} alt="img"/>
                    <img className={mainPage? styles.youTube : styles.girl} src={currentImg} alt="img"/>
                </div>
                <p className={`${styles.title} text36`}>{attributes.title}</p>

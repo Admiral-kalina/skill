@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {Link} from "gatsby";
 import {useDispatch, useSelector} from "react-redux";
 
@@ -15,6 +15,7 @@ import basket from "./../../images/shopping-bag.svg";
 import {changeUserLanguage} from "../../features/userSlice/userSlice";
 import i18n from "i18next";
 import {useTranslation} from "react-i18next";
+import axios from "axios";
 
 
 
@@ -26,6 +27,7 @@ const Header = () => {
 
     const ref = useRef();
     const headerRef = useRef();
+
 
     const [hamburger, setHamburger] = useState(false);
     const [isRelocationActive, setRelocationActive] = useState(false);
@@ -57,6 +59,8 @@ const Header = () => {
     const itest = () => {
         i18n.changeLanguage(languageVariant.toLowerCase())
     }
+
+
 
 
     return (

@@ -1,5 +1,6 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
 import axios from 'axios'
+import {BACKAND_URL} from "../../global";
 
 const initialState = {
    aboutSlides: [],
@@ -28,6 +29,7 @@ export const aboutSliderSlice = createSlice({
         builder.addCase(fetchAboutSlider.fulfilled, (state, action) => {
             state.isLoading = false
             state.aboutSlides = action.payload.data.attributes.slider.data
+            console.log(action.payload)
         })
         builder.addCase(fetchAboutSlider.rejected, (state, action) => {
             state.isLoading = false

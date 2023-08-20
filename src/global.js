@@ -1,2 +1,2 @@
-const BACKAND_URL = 'http://localhost:1337';
-const PAYMENT_BACKEND = 'http://localhost:5000';
+export const BACKAND_URL = 'https://skill-back.onrender.com';
+export const PAYMENT_BACKEND = 'http://localhost:5000';

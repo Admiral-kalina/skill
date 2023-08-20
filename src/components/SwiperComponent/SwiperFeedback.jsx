@@ -96,7 +96,7 @@ const SwiperFeedback = () => {
                         <SwiperSlide>
                             <div className={styles.wrapper}>
                                 <div className={styles.block}>
-                                    <img src={`http://localhost:1337${el.attributes.logo.data.attributes.url}`}
+                                    <img src={el.attributes.logo.data.attributes.url}
                                          alt="img"/>
                                     <p className={`${styles.text} text32`}>{el.attributes.comment}</p>
                                     <div className={styles.stars}>

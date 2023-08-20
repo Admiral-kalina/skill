@@ -82,7 +82,7 @@ export const SwiperComponent = ({endpoint}) => {
             >
                 {aboutSlides?.map(el =>
                     <SwiperSlide>
-                        <img src={`http://localhost:1337${el.attributes.url}`} alt=""/>
+                        <img src={el.attributes.url} alt=""/>
                     </SwiperSlide>
                 )}
             </Swiper>
