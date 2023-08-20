@@ -33,7 +33,7 @@ const Checkout = () => {
 
     const createPayment = async (values) => {
         console.log('payment',values)
-        const response = await axios.post('http://localhost:5000/payment',{
+        const response = await axios.post(`${PAYMENT_BACKEND}/payment`,{
             amount: {
                     value: totalPrice,
                     currency: "EUR"

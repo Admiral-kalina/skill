@@ -10,7 +10,7 @@ const initialState = {
 export const fetchFeedbackSlider = createAsyncThunk(
     'feedbackSlider/fetchFeedbackSlider',
     async (language) => {
-        const res = await axios(`http://localhost:1337/api/feedbacks?locale=${language}&populate=*`)
+        const res = await axios(`${BACKAND_URL}/api/feedbacks?locale=${language}&populate=*`)
         return await res.data
     }
 )

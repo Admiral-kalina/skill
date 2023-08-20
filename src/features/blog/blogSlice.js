@@ -10,7 +10,7 @@ const initialState = {
 export const fetchBlog = createAsyncThunk(
     'blog/fetchBlog',
     async () => {
-        const res = await axios('http://localhost:1337/api/blogs?locale=en')
+        const res = await axios(`${BACKAND_URL}/api/blogs?locale=en`)
         return await res.data
     }
 )

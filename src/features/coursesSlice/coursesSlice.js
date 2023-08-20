@@ -11,7 +11,7 @@ export const fetchCourses = createAsyncThunk(
     'courses/fetchCourses',
     async (language) => {
         console.log(language)
-        const res = await axios(`http://localhost:1337/api/course-lists?locale=${language}&populate=*`)
+        const res = await axios(`${BACKAND_URL}/api/course-lists?locale=${language}&populate=*`)
         return await res.data
     }
 )

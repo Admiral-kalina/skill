@@ -11,7 +11,7 @@ export const fetchAboutSlider = createAsyncThunk(
 
     'aboutSlider/fetchAboutSlider',
     async (endpoint) => {
-        const res = await axios(`http://localhost:1337/api/${endpoint}?populate=*`)
+        const res = await axios(`${BACKAND_URL}/api/${endpoint}?populate=*`)
         console.log(res)
         return await res.data
     }

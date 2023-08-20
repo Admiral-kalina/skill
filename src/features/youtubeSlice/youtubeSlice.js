@@ -10,7 +10,7 @@ const initialState = {
 export const fetchYoutube = createAsyncThunk(
     'youtube/fetchAboutSlider',
     async (language) => {
-        const res = await axios(`http://localhost:1337/api/youtube-chanels?locale=${language}&populate=*`)
+        const res = await axios(`${BACKAND_URL}/api/youtube-chanels?locale=${language}&populate=*`)
         return await res.data
     }
 )
