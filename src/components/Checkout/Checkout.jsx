@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {Field, Formik} from "formik";
 import axios from "axios";
@@ -16,12 +16,25 @@ import * as styles from "./checkout.module.scss";
 import {useTranslation} from "react-i18next";
 import {groupCheckoutItems} from "../../helpers/groupCheckoutItems";
 import {navigate} from "gatsby";
+import {PAYMENT_BACKEND} from "../../global";
+import {paymentApi} from "../../api";
+
 
 
 const Checkout = () => {
     const {t} = useTranslation();
     const {coursesList} = useSelector(store => store.user.user)
     const dispatch = useDispatch()
+
+    console.log('ENV', process.env.PAYMENT_BACKEND)
+    console.log('ENV', process.env.BACKAND_URL)
+    useEffect(() => {
+        if(typeof window !==`undefined` && window.location.search){
+            const queryString = window.location.search;
+            const paymentID = queryString.replace(/[^0-9]/g, "");;
+            webhook(paymentID)
+        }
+    },[])
 
     const handleRemove = () => {
         dispatch(removeUserCurse())
@@ -30,10 +43,14 @@ const Checkout = () => {
     const totalPrice = calculateTotalPrice(coursesList)
     const checkoutItems = groupCheckoutItems(coursesList)
 
+    const webhook = async (paymentId) => {
+        const response = await paymentApi.post(`/webhook`,{paymentId:paymentId})
+        console.log(response)
+    }
 
     const createPayment = async (values) => {
         console.log('payment',values)
-        const response = await axios.post(`${PAYMENT_BACKEND}/payment`,{
+        const response = await paymentApi.post(`/payment`,{
             amount: {
                     value: totalPrice,
                     currency: "EUR"

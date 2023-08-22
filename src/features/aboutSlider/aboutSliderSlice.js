@@ -1,6 +1,5 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
-import axios from 'axios'
-import {BACKAND_URL} from "../../global";
+import {strapiApi} from "../../api";
 
 const initialState = {
    aboutSlides: [],
@@ -9,10 +8,9 @@ const initialState = {
 }
 
 export const fetchAboutSlider = createAsyncThunk(
-
     'aboutSlider/fetchAboutSlider',
     async (endpoint) => {
-        const res = await axios(`${BACKAND_URL}/api/${endpoint}?populate=*`)
+        const res = await strapiApi.get(`/api/${endpoint}?populate=*`)
         console.log(res)
         return await res.data
     }

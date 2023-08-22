@@ -15,7 +15,6 @@ import team3 from '../../images/aboutUs/team3.png';
 import girl from '../../images/aboutUs/girl.png';
 import {useTranslation} from "react-i18next";
 
-
 const AboutUs = () => {
     const {t} = useTranslation();
 

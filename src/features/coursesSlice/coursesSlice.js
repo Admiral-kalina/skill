@@ -1,6 +1,6 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
-import axios from 'axios'
-import {BACKAND_URL} from "../../global";
+import {strapiApi} from "../../api";
+
 
 const initialState = {
     courses: [],
@@ -12,7 +12,7 @@ export const fetchCourses = createAsyncThunk(
     'courses/fetchCourses',
     async (language) => {
         console.log(language)
-        const res = await axios(`${BACKAND_URL}/api/course-lists?locale=${language}&populate=*`)
+        const res = await strapiApi.get(`/api/course-lists?locale=${language}&populate=*`)
         return await res.data
     }
 )

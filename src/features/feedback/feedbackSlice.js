@@ -1,6 +1,5 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
-import axios from 'axios'
-import {BACKAND_URL} from "../../global";
+import {strapiApi} from "../../api";
 
 const initialState = {
     feedbackSlides: [],
@@ -11,7 +10,7 @@ const initialState = {
 export const fetchFeedbackSlider = createAsyncThunk(
     'feedbackSlider/fetchFeedbackSlider',
     async (language) => {
-        const res = await axios(`${BACKAND_URL}/api/feedbacks?locale=${language}&populate=*`)
+        const res = await strapiApi.get(`/api/feedbacks?locale=${language}&populate=*`)
         return await res.data
     }
 )

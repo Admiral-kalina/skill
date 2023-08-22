@@ -1,6 +1,5 @@
-import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
-import axios from 'axios'
-import {BACKAND_URL} from "../../global";
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import {strapiApi} from "../../api";
 
 const initialState = {
     list: [],
@@ -11,7 +10,7 @@ const initialState = {
 export const fetchYoutube = createAsyncThunk(
     'youtube/fetchAboutSlider',
     async (language) => {
-        const res = await axios(`${BACKAND_URL}/api/youtube-chanels?locale=${language}&populate=*`)
+        const res = await strapiApi.get(`/api/youtube-chanels?locale=${language}&populate=*`)
         return await res.data
     }
 )
