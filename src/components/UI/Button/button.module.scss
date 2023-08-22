@@ -52,6 +52,17 @@
   font-weight: 500;
 }
 
+.blueLinear{
+  border-radius: 100px;
+  background: linear-gradient(180deg, #5EC3CD 4.69%, #0D0CB5 100%);
+  box-shadow: 24px 24px 48px 0 rgba(0, 0, 0, 0.10);
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  font-size: inherit;
+  font-weight: 500;
+}
+
 .teal{
   white-space: nowrap;
   max-width: 287px;

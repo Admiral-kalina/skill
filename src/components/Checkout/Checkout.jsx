@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {Field, Formik} from "formik";
 import axios from "axios";
@@ -22,6 +22,7 @@ import {paymentApi} from "../../api";
 
 
 const Checkout = () => {
+    const [paymentStatus, setPaymentStatus] = useState(null)
     const {t} = useTranslation();
     const {coursesList} = useSelector(store => store.user.user)
     const dispatch = useDispatch()
@@ -45,7 +46,10 @@ const Checkout = () => {
 
     const webhook = async (paymentId) => {
         const response = await paymentApi.post(`/webhook`,{paymentId:paymentId})
-        console.log(response)
+        console.log(response.data)
+        setPaymentStatus(response.data)
+        handleRemove()
+        window.history.replaceState(null, '', window.location.pathname);
     }
 
     const createPayment = async (values) => {
@@ -73,7 +77,10 @@ const Checkout = () => {
 
                 {coursesList.length === 0
                     ?
-                    <h2 className={styles.title}>Ваша корзина пустая</h2>
+                   <>
+                       <h2 className={styles.title}>Ваша корзина пустая</h2>
+                       {paymentStatus && <p className={`${styles.status} text48`}>Payment status : {paymentStatus}</p>}
+                   </>
                     :
                    <>
                        <h2 className={styles.title}>{t('checkout.text1')}</h2>

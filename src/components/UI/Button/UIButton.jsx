@@ -16,6 +16,7 @@ export const UIButton = ({
     blueTwoColour,
     teal,
     red,
+    blueLinear,
     send,
     style
 }) => {
@@ -24,6 +25,7 @@ export const UIButton = ({
         [cls.transparent] : transparent,
         [cls.blueRounded] : blueRounded,
         [cls.blueLight]: blueLight,
+        [cls.blueLinear]: blueLinear,
         [cls.blueLightArrow]: blueLightArrow,
         [cls.blueTwoColour]: blueTwoColour,
         [cls.teal]: teal,
