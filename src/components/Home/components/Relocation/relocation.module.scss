@@ -139,8 +139,9 @@
     @media screen and (max-width: 425px) {
       font-size: 10px;
       height: 30px;
-      button {
-        padding: 0 16px 0 12px;
+
+      ::before{
+        transform: scale(0.4);
       }
     }
   }

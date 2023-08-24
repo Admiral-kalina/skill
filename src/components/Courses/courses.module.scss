@@ -202,13 +202,22 @@
 
   .youtube {
     margin-top: 220px;
-
     h2 {
       margin: 0;
       text-align: left;
       color: #000;
     }
+    @media screen  and (max-width: 1024px){
+      margin-top: 110px;
+    }
+    @media screen  and (max-width: 768px){
+      margin-top: 65px;
+    }
+    @media screen  and (max-width: 450px){
+      margin-top: 30px;
+    }
   }
+
 
 }
 

@@ -14,7 +14,6 @@ export const RelocationPage = () => {
             <Businnes/>
             <Year/>
             <Consultation/>
-            <Footer/>
         </div>
     );
 };

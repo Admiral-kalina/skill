@@ -18,6 +18,12 @@
     .subtitle {
       text-align: right;
     }
+    .btnContainer{
+      button{
+        width: fit-content;
+        white-space: nowrap;
+      }
+    }
   }
 
   .containerBig {

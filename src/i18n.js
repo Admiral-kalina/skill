@@ -82,6 +82,7 @@ i18n
                         },
                         block5: {
                             title: 'Our products',
+                            link1:'More information',
                             box1: {
                                 text1: 'RELOCATION to the Netherlands without stress',
                                 text2: 'Individual support for startup and self-employed visa. For those who want a quick result. Turnkey support and soft landing! For teams and individuals.',
@@ -654,6 +655,7 @@ i18n
                         },
                         block5: {
                             title: 'Наши продукты',
+                            link1:'Подробнее',
                             box1: {
                                 text1: 'РЕЛОКАЦИЯ в Нидерланды без стресса',
                                 text2: 'Индивидуальное сопровождение по стартап и бизнес визе в Нидерланды. Помогаем перевезти семью в безопасную стабильную страну. Для тех, кому нужно все и сразу. Мы сделаем все за вас! Для команд и одиночек.',

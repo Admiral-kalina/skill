@@ -1,5 +1,4 @@
 .row {
-  overflow: hidden;
   display: table;
   table-layout: auto;
 
@@ -22,7 +21,9 @@
       right: -103px;
       transform: translate(0, -83%);
       @media screen and (max-width: 1024px) {
-        transform: translate(0, -83%);
+        transform: scale(0.7) translate(0, -83%);
+        top: -44px;
+        right: -45px;
       }
     }
 

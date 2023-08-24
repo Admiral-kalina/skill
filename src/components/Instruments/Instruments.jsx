@@ -17,6 +17,9 @@ import team3 from "../../images/instruments/team3.png";
 import rating from "../../images/instruments/rating.png";
 import vector from "../../images/instruments/vector.png";
 import {useTranslation} from "react-i18next";
+import FeedbackSlice from "../../features/feedback/feedbackSlice";
+import SwiperFeedback from "../SwiperComponent/SwiperFeedback";
+import Footer from "../Footer/Footer";
 
 
 const Instruments = () => {
@@ -221,6 +224,9 @@ const Instruments = () => {
                       </div>
                   </div>
               </div>
+            </div>
+            <div className={styles.feedback}>
+                {/*<SwiperFeedback isPageInstruments={true}/>*/}
             </div>
         </div>
     );

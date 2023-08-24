@@ -23,6 +23,9 @@
   @media(max-width: 1199px) {
     max-width: 1024px;
   }
+  @media(max-width: 768px) {
+    padding: 0 15px 120px 15px;
+  }
 }
 
 .title {
@@ -45,6 +48,9 @@
   position: relative;
   @media(max-width: 1199px) {
     margin-bottom: 4rem;
+  }
+  @media(max-width: 768px) {
+    margin-bottom:20px;
   }
 }
 
@@ -197,7 +203,7 @@
   padding: 0px 24px 0px 10px;
   @media(max-width: 768px) {
     font-size: 10px;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
 }
 

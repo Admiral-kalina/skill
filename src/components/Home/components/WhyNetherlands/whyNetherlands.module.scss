@@ -73,87 +73,9 @@
     }
   }
 
-  .btnBlock {
-    position: relative;
-    height: 102px;
-    max-width: 850px;
-    button{
-      position: relative;
-      &:after {
-        right: 20%;
-        top: 50%;
-        transform: translate(0px, -32%);
-        background-size: contain;
-        content: '';
-        background-repeat: no-repeat;
-        background-image: url("../../../../images/btnArrow.svg");
-        display: block;
-        position: absolute;
-        width: 10px;
-        height: 20px;
-      }
-    }
 
-    text-align: left;
-    @media screen and (max-width: 1024px) {
-      height: 75px;
-      button {
-        text-align: left;
-        width: 435px;
-        margin: 0 0 0 auto;
-        padding: 0 0 0 30px;
-        &:after {
-          right: 5%;
-        }
-      }
 
-    }
-    @media screen and (max-width: 768px) {
-      height: 40px;
-      button {
-        margin: 0 auto;
-        text-align: left;
-        width: 435px;
-        padding: 0 0 0 30px;
-        &:after {
-          width: 7px;
-          height: 15px;
-        }
-      }
-    }
-    @media screen and (max-width: 600px) {
-      height: 40px;
-      button {
-        margin: 0 auto;
-        text-align: left;
-        width: 335px;
-        padding: 0 0 0 30px;
-        &:after {
-          width: 7px;
-          height: 15px;
-        }
-      }
-    }
-    @media screen and (max-width: 450px) {
-      height: 24px;
-      button {
-        font-size: 12px;
-        margin: 0 auto;
-        text-align: left;
-        width: 230px;
-        padding: 0 0 0 20px;
-        &:after {
-          transform: translate(0px, -36%);
-          width: 9px;
-          height: 9px;
-        }
-      }
-    }
-  }
 
-  .textComforter {
-    margin: 400px 0 0 auto;
-  }
 
   @media screen and (max-width: 1024px) {
     margin-top: 90px;
@@ -165,6 +87,12 @@
 
   @media screen and (max-width: 768px) {
     margin-top: 45px;
+    .title{
+      margin: 0 0 16px 0;
+    }
+    .subtitle{
+      margin: 0;
+    }
     span {
       display: none;
     }
@@ -172,14 +100,14 @@
       margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
-      row-gap: 40px;
+      row-gap: 32px;
     }
   }
   @media screen and (max-width: 450px) {
     span {
     }
     .row {
-      row-gap: 20px;
+      row-gap: 16px;
     }
   }
 }

@@ -12,17 +12,18 @@ import YoutubeList from "../Courses/YoutubeList/YoutubeList";
 import SwiperFeedback from "../SwiperComponent/SwiperFeedback";
 
 // styles
-import * as styles from "./home.modules.scss"
+import * as styles from "./home.module.scss"
 
 // assets
 
 import avatar from "../../images/courses/avatar.png";
+import Footer from "../Footer/Footer";
 
 
 
 export const Home = () => {
     return (
-        <div>
+        <div className={styles.home}>
             <Relocation/>
             <WhatWeCan/>
             <Business/>
@@ -31,6 +32,9 @@ export const Home = () => {
             <ForClients/>
             <WhyNetherlands/>
             <SwiperFeedback/>
+           <div className={styles.footerBlock}>
+               <Footer withPlanes/>
+           </div>
         </div>
 
     );

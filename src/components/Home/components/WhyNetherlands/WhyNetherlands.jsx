@@ -71,10 +71,6 @@ const WhyNetherlands = () => {
                     </div>
                 </div>
             </div>
-            <div className={`${styles.btnBlock} text40`}>
-                <Link to={'/#'}><UIButton blueLinear>Информация о Нидерландах</UIButton></Link>
-            </div>
-            <p className={`textComforter ${styles.textComforter}`}>Еще больше!</p>
         </section>
     );
 };

@@ -1,0 +1,67 @@
+
+
+//.youtube {
+//  margin-top: 220px;
+//  .container {
+//    max-width: 1440px;
+//    margin: 0 auto;
+//    padding: 0 15px;
+//  }
+//
+//  h2{
+//    margin: 0;
+//    text-align: left;
+//    color: #000;
+//  }
+//  .row {
+//    display: table;
+//    table-layout: fixed;
+//    column-gap: 20px;
+//
+//    .column{
+//      display: table-cell;
+//      padding-left: 20px;
+//      vertical-align: baseline;
+//      .girl{
+//        display: none;
+//        position: absolute;
+//        top: 0;
+//        transform: translate(0, -53%);
+//        @media screen and (max-width: 1024px){
+//          transform: translate(0, -83%);
+//        }
+//      }
+//      &:last-child {
+//        position: relative;
+//        .girl{
+//          display: block;
+//        }
+//      }
+//    }
+//
+//    img{
+//      width: 100%;
+//      height: auto;
+//    }
+//    @media screen and (max-width: 768px){
+//
+//    }
+//  }
+//}
+
+
+.footerBlock{
+  padding-top: 400px;
+  @media screen and (max-width: 1300px){
+    //padding-top: 500px;
+  }
+  @media screen and (max-width: 1024px){
+    padding-top: 100px;
+  }
+  @media screen and (max-width: 768px){
+    padding-top: 50px;
+  }
+  @media screen and (max-width: 450px){
+    padding-top: 10px;
+  }
+}

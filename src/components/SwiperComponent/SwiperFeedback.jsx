@@ -16,9 +16,11 @@ import StarRatings from "react-star-ratings/build/star-ratings";
 //assets
 import background from "../../images/feedbackVector.svg"
 import {getWindowType} from "../../helpers/getWindowType";
+import {Link} from "gatsby";
+import {UIButton} from "../UI/Button/UIButton";
 
 
-const SwiperFeedback = () => {
+const SwiperFeedback = ({isPageInstruments}) => {
     const {language} = useSelector(store => store.user.user);
     const [buttonsActive, setButtonsActive] = useState({btnPrev: false, btnNext: true})
     const swiperRef = useRef();
@@ -74,14 +76,26 @@ const SwiperFeedback = () => {
 
     return (
         <div className={styles.feedbackBlock}>
-            <img className={styles.background} src={background} alt='background'/>
-            <div className={styles.container}>
+            {isPageInstruments
+                ?
+                <p className={`${styles.instrumentsText} text96 `}>Выпускники о курсе</p>
+                :
+                <>
+                    <div className={`${styles.btnBlock} text40`}>
+                        <Link to={'/#'}><UIButton blueLinear>Информация о Нидерландах</UIButton></Link>
+                    </div>
+                    <p className={`textComforter ${styles.textComforter}`}>Еще больше!</p>
+                </>
+            }
+            <div className={`${styles.container} feedbackSlider`}>
                 <Swiper
                     modules={[Grid]}
-                    slidesPerView={isMobile ? 1 : 2}
+                    slidesPerView={ 1 }
+                    spaceBetween={50}
                     grid={{
-                        rows: isMobile ? 2 : 1,
+                        rows: 2 ,
                         fill: "row",
+
                     }}
 
                     pagination={{
@@ -90,6 +104,16 @@ const SwiperFeedback = () => {
 
                     onBeforeInit={(swiper) => {
                         swiperRef.current = swiper;
+                    }}
+                    breakpoints={{
+                        1024: {
+                            slidesPerView: 2,
+                            spaceBetween:25,
+                            grid: {
+                                rows: 1,
+                                fill: "row",
+                            }
+                        },
                     }}
                 >
                     {feedbackSlides?.map(el =>

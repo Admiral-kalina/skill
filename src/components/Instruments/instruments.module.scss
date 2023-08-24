@@ -84,7 +84,6 @@
     }
     @media screen and (max-width: 500px) {
       button {
-        max-width: 120px;
         font-size: 12px;
       }
     }
@@ -878,7 +877,7 @@
         padding: 60px 0 40px 25px;
       }
       .box {
-        padding: 0 35px 0 60px;
+        padding: 0 35px 35px 60px;
       }
       .btnBlock {
         height: 80px;
@@ -952,6 +951,9 @@
         }
       }
     }
+  }
+  .feedback{
+    position: relative;
   }
 }
 
