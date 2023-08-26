@@ -7,13 +7,20 @@ import Footer from "../Footer/Footer";
 
 // styles
 import * as styles from "./blog.module.scss"
+import axios from "axios";
 
 
 const Blog = () => {
     const dispatch = useDispatch();
 
+    const get = async () => {
+        const a = await axios.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&&access_token=IGQWRPX0l2c3VHOGExdEpWX1dFQWJubHlSa2FRUWJwSWJhRS1GamF1cjFvbUNCNXNNVUo2SWR6cW93NExRVXVLX1VGNHJjNDNIRU1LM2NoT2hKNkJhMFBhZAXo0aFpma29NUWFMTkFxeUdMT0dENzJHQ3RMVHQ2Q3MZD')
+        console.log('AA',a)
+    }
+
     useEffect(() => {
         dispatch(fetchInstagramData())
+        get()
     }, [])
 
     const {instagramPosts} = useSelector(state => state.instagram);
