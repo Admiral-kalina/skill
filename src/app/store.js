@@ -6,6 +6,7 @@ import youtubeSlice from "../features/youtubeSlice/youtubeSlice";
 import coursesSlice from "../features/coursesSlice/coursesSlice";
 import userSlice from "../features/userSlice/userSlice";
 import feedbackSlice from "../features/feedback/feedbackSlice";
+import instagramSlice from "../features/instagramSlice/instagramSlice";
 
 
 export const store = configureStore({
@@ -16,5 +17,6 @@ export const store = configureStore({
         courses: coursesSlice,
         user: userSlice,
         feedback:feedbackSlice,
+        instagram:instagramSlice
     },
 })

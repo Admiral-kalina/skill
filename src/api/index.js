@@ -1,5 +1,6 @@
 import paymentAxios from "./paymentAxios";
 import strapiAxios from "./strapiAxios";
+import instagramAxios from "./instagramAxios";
 
 class Api {
     constructor($axios) {
@@ -17,3 +18,4 @@ class Api {
 
 export const strapiApi = new Api(strapiAxios);
 export const paymentApi = new Api(paymentAxios);
+export const instagramApi = new Api(instagramAxios);
