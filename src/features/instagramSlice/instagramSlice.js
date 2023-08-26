@@ -12,7 +12,7 @@ export const fetchInstagramData = createAsyncThunk(
     'instagram/fetchInstagramData',
     async () => {
         console.log('FETCH')
-        const res = await axios.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&&access_token=IGQWRQb09wbjZAOVXVkQ1Rrc3gxc0xHT2RrdDhLT2xCaXVhWUI3WUpfdTRObnhDSV9PdXhzc0NQeGhPV3F5c3c5T2RGWkc3czF1QThJZAzdiYVVVWHRSYnR3S3FRUnZAhZAWVGT1JZAVXdydkNPcmxiVUFTdGdxdlptX28ZD')
+        const res = await axios.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&&access_token=IGQWRPX0l2c3VHOGExdEpWX1dFQWJubHlSa2FRUWJwSWJhRS1GamF1cjFvbUNCNXNNVUo2SWR6cW93NExRVXVLX1VGNHJjNDNIRU1LM2NoT2hKNkJhMFBhZAXo0aFpma29NUWFMTkFxeUdMT0dENzJHQ3RMVHQ2Q3MZD')
 
         console.log(res)
         return await res.data
