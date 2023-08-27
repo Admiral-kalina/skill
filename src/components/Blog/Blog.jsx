@@ -14,12 +14,12 @@ const Blog = () => {
     const dispatch = useDispatch();
 
     const get = async () => {
-        const a = await axios.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&&access_token=IGQWRPX0l2c3VHOGExdEpWX1dFQWJubHlSa2FRUWJwSWJhRS1GamF1cjFvbUNCNXNNVUo2SWR6cW93NExRVXVLX1VGNHJjNDNIRU1LM2NoT2hKNkJhMFBhZAXo0aFpma29NUWFMTkFxeUdMT0dENzJHQ3RMVHQ2Q3MZD')
+        const a = await axios.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=5&access_token=IGQWRPX3V4M1ctUURENTFIak1SUGtsa2F2d3ZArSG5NTnEwMUpHWDVuZAXpaVl9qUjBVS3hEV1M5aExQVXd1eGpyU0pNeGlFZADZAWUXdKVTdMc0ZAHLUNqNDBDLURMdnRUMjdqNGpjNDBudVMwcHZAVR29YVlJqcXFUOU0ZD')
         console.log('AA',a)
     }
 
     useEffect(() => {
-        dispatch(fetchInstagramData())
+        // dispatch(fetchInstagramData())
         get()
     }, [])
 
@@ -27,16 +27,16 @@ const Blog = () => {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.root}>
-                <div className={styles.container}>
-                    {instagramPosts.map(post =>
-                        <div key={post.id} className={styles.post}>
-                            <img className={styles.postImg} src={post.media_url} alt='postImg'/>
-                            <p className={`${styles.postDescription} text36`}>{post.caption}</p>
-                        </div>
-                    )}
-                </div>
-            </div>
+            {/*<div className={styles.root}>*/}
+            {/*    <div className={styles.container}>*/}
+            {/*        {instagramPosts.map(post =>*/}
+            {/*            <div key={post.id} className={styles.post}>*/}
+            {/*                <img className={styles.postImg} src={post.media_url} alt='postImg'/>*/}
+            {/*                <p className={`${styles.postDescription} text36`}>{post.caption}</p>*/}
+            {/*            </div>*/}
+            {/*        )}*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className={styles.footer}>
                 <Footer withPlanes/>
             </div>
@@ -45,3 +45,8 @@ const Blog = () => {
 };
 
 export default Blog;
+
+
+
+// 37144011497
+// IGQWRPX3V4M1ctUURENTFIak1SUGtsa2F2d3ZArSG5NTnEwMUpHWDVuZAXpaVl9qUjBVS3hEV1M5aExQVXd1eGpyU0pNeGlFZADZAWUXdKVTdMc0ZAHLUNqNDBDLURMdnRUMjdqNGpjNDBudVMwcHZAVR29YVlJqcXFUOU0ZD
