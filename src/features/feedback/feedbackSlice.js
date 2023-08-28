@@ -11,6 +11,7 @@ export const fetchFeedbackSlider = createAsyncThunk(
     'feedbackSlider/fetchFeedbackSlider',
     async (language) => {
         const res = await strapiApi.get(`/api/feedbacks?locale=${language}&populate=*`)
+        console.log('FEED',res)
         return await res.data
     }
 )

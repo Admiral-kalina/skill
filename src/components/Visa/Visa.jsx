@@ -1,11 +1,15 @@
 import React from 'react';
-
-//styles
-import * as styles from "./visa.module.scss"
-import library from "../../images/startupVisa/library.png";
 import {UIButton} from "../UI/Button/UIButton";
-import girl from "../../images/visa/girl.png";
 import {useTranslation} from "react-i18next";
+
+// styles
+import * as styles from "./visa.module.scss"
+
+// assets
+import dart from "../../images/visa/dart.png"
+import girl from "../../images/visa/girl.png";
+import library from "../../images/startupVisa/library.png";
+
 
 const Visa = () => {
     const {t} = useTranslation();
@@ -57,8 +61,9 @@ const Visa = () => {
             <div className={styles.leftZeroBlock}>
                 <div className={styles.containerBig}>
                     <div className={`${styles.row} ${styles.library}`}>
-                        <img src={library} alt="library"/>
-                        <div>
+                        <img  src={library} alt="library"/>
+                        <div className={styles.bonus}>
+                            <img className={styles.dartImg} src={dart} alt="dart"/>
                             <p className="text36"><span>{t('visa.box3.text1')}</span></p>
                             <p className="text36">{t('visa.box3.text2')}</p>
                             <p className="text36">{t('visa.box3.text3')}</p>
@@ -69,6 +74,8 @@ const Visa = () => {
                 </div>
             </div>
             <div className={styles.full}>
+                <p className={`textComforter ${styles.textComforter}`}>Начни сейчас!</p>
+
                 <div className={styles.container}>
                     <p className="text36">{t('visa.box3.text6')}</p>
                     <div className={`btnContainer ${styles.btnContainer}`}>

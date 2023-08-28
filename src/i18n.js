@@ -571,6 +571,7 @@ i18n
                             },
                             btn1: 'Register to check fundraising options',
                             btn2: 'Online workshop Grants and Subsidies',
+                            conduit:'Look!'
                         }
                     },
                     checkout: {
@@ -596,7 +597,7 @@ i18n
                         text1: 'Главная ',
                         text2: 'Релокация',
                         text3: 'Стартап виза',
-                        text4: 'Стартап виза',
+                        text4: 'Виза - ориентационный год',
                         text5: 'Финансирование',
                         text6: 'Кейсы',
                         text7: 'Курсы и мастер-классы',
@@ -1146,6 +1147,7 @@ i18n
                             },
                             btn1: 'Подбор финансирования',
                             btn2: 'Мастер класс Гранты и Субсидии',
+                            conduit:'Смотри!'
                         }
                     },
                     checkout: {

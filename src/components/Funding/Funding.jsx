@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 //styles
 import * as styles from "./funding.module.scss"
@@ -9,6 +9,11 @@ import conversation from "../../images/funding/conversation.png"
 import girl from "../../images/funding/girl.png"
 import vector from "../../images/funding/vector.svg"
 import {useTranslation} from "react-i18next";
+import {Link} from "gatsby";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchFeedbackSlider} from "../../features/feedback/feedbackSlice";
+import {fetchFundingYoutube} from "../../features/fundingYoutubeSlice/fundingYoutubeSlice";
+import FundingYoutube from "./FundingYoutube";
 
 export const Funding = () => {
     const {t} = useTranslation();
@@ -54,10 +59,14 @@ export const Funding = () => {
                                 </p>
                                 <div className={styles.btns}>
                                     <div className={`${styles.btnContainer} btnContainer`}>
-                                        <UIButton blueLight>{t('funding.box2.btn1')}</UIButton>
+                                        <Link to={'/'}>
+                                            <UIButton blueLight>{t('funding.box2.btn1')}</UIButton>
+                                        </Link>
                                     </div>
                                     <div className={`${styles.whiteBtn} ${styles.btnContainer} btnContainer`}>
-                                        <UIButton white>{t('funding.box2.btn1')}</UIButton>
+                                       <Link to={'/'}>
+                                           <UIButton white>{t('funding.box2.btn1')}</UIButton>
+                                       </Link>
                                     </div>
                                 </div>
                             </div>
@@ -66,18 +75,7 @@ export const Funding = () => {
                 </div>
 
             </div>
-            <div className={styles.book}>
-                <div className={styles.container}>
-                    <div className={styles.bookContent}>
-                        <p className={`${styles.bookTitle} text36`}>Запись вебинара Фандрайзинг в Нидерландах.<br/> Где
-                            найти деньги на стартап.</p>
-                        <img className={styles.mainImg} src={conversation} alt="img"/>
-                        <img className={styles.girl} src={girl} alt="img"/>
-                        <img className={styles.vector} src={vector} alt="vector"/>
-                        <p className={`${styles.comforterText} textComf`}>Смотри!</p>
-                    </div>
-                </div>
-            </div>
+           <FundingYoutube/>
         </div>
     );
 };

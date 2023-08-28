@@ -1,11 +1,15 @@
 .root {
-  margin: 120px 0 350px 0 ;
-@media  screen and (max-width: 1024px){
-  margin: 100px 0 180px 0 ;
-}
-  @media  screen and (max-width: 768px){
-    margin: 100px 0 130px 0 ;
+  padding: 120px 0 450px 0;
+  @media screen and (max-width: 1440px) {
+    padding: 120px 0 400px 0;
   }
+  @media screen and (max-width: 1024px) {
+    padding: 100px 0 180px 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 80px 0 130px 0;
+  }
+
   .container {
     max-width: 1430px;
     padding: 0 15px;
@@ -124,16 +128,22 @@
           display: block;
 
           button {
+            width: fit-content;
+
             &:before {
-              content: url("../../images/btnArrowBlack.svg");
+              display: none;
             }
           }
         }
 
         button {
+          padding: 0 50px 0  10px !important;
+          width: fit-content;
           text-transform: none;
           white-space: nowrap;
-          padding-left: 10px;
+          &:before {
+            display: none;
+          }
         }
       }
     }
@@ -293,10 +303,10 @@
       }
     }
     @media screen and (max-width: 768px) {
-      .bookContent{
+      .bookContent {
         width: 300px
       }
-      .vector{
+      .vector {
         width: 250px;
         height: 80px;
         bottom: -80px;
@@ -305,34 +315,34 @@
         width: 300px;
         height: 206px;
       }
-      .girl{
+      .girl {
         height: 207px;
         width: 122px;
         left: -88px;
         bottom: -30px;
       }
     }
-    @media screen and (max-width: 600px){
-      .bookContent{
+    @media screen and (max-width: 600px) {
+      .bookContent {
         width: 240px;
       }
-      .mainImg{
+      .mainImg {
         width: 215px;
         height: 153px;
       }
-      .girl{
+      .girl {
         width: 101px;
         height: 150px;
       }
-      .comforterText{
-        right: -98px  ;
+      .comforterText {
+        right: -98px;
       }
     }
-    @media screen and (max-width: 450px){
+    @media screen and (max-width: 450px) {
       .comforterText {
         right: -55px;
       }
-      .girl{
+      .girl {
         left: -70px;
       }
     }

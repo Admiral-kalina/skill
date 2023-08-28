@@ -65,6 +65,11 @@
       margin: 90px 0px 0 0px;
       transform: scale(0.5) rotate(-13deg);
     }
+
+    @media screen and (max-width: 1200px) {
+      margin: 140px 0px 0 0px;
+      transform: scale(0.5) rotate(-13deg);
+    }
     @media screen and (max-width: 1024px) {
       right: 0;
       transform: translate(0%, 0%) scale(0.4) rotate(-13deg);
@@ -74,6 +79,7 @@
       }
     }
     @media screen and (max-width: 768px) {
+      margin: 90px 0px 0 0px;
       transform: translate(0%, 0%) scale(0.3) rotate(-13deg);
       right: -90px;
     }
@@ -84,8 +90,12 @@
   }
 
   .btnBlock {
+    position: relative;
+    top: 110px;
+
     white-space: nowrap;
     button {
+
       position: relative;
       top: 100%;
       left: 10%;
@@ -118,13 +128,22 @@
       }
     }
     @media screen and (max-width: 1200px) {
+      a {
+        display: flex;
+        justify-content: center;
+      }
+      top: 10px;
       height: 75px;
       button {
+        top: auto;
+        left: auto;
+        text-align: center;
+        width: auto;
+        margin: 0 auto;
+
         font-size: 28px;
         white-space: nowrap;
-        text-align: left;
-        width: auto;
-        margin: 0 0 0 auto;
+
         padding: 0 60px;
 
         &:after {
@@ -198,13 +217,33 @@
   //background-repeat: no-repeat;
   //background-size: cover;
   .container {
+    position: relative;
     background-image: url("../../images/feedbackVector.svg");
     top: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 600px 0 15px;
-    max-width: 1321px;
+    padding: 600px 0 30px;
     margin: 0 auto;
+  }
+
+  .instrumentContainer{
+    @media screen and (max-width: 768px){
+      padding: 100px 15px 40px 15px !important;
+    }
+  }
+
+  .girl{
+    position: absolute;
+    left: 0;
+    bottom: -350px;
+    @media screen and (max-width: 1440px){
+      transform: scale(.7);
+      left: -166px;
+      bottom: -425px;
+    }
+    @media screen and (max-width: 1024px){
+      display: none;
+    }
   }
 
   .block {
@@ -266,7 +305,7 @@
   }
   @media screen and (max-width: 1224px) {
     .container {
-      background-image: none;
+
       padding: 250px 15px 50px 15px;
     }
   }
@@ -277,6 +316,7 @@
   }
   @media screen and (max-width: 1024px) {
     .container {
+      background-image: none;
       padding: 200px 15px 40px 15px;
     }
   }

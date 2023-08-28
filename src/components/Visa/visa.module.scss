@@ -1,5 +1,5 @@
 .root{
-  padding-top: 150px;
+  padding: 150px 0 450px;
   p{
     font-weight: 300;
   }
@@ -36,11 +36,65 @@
     padding: 0 15px;
   }
 
+  .btnContainer{
+    button{
+      width: fit-content;
+    }
+  }
+  h2{
+    text-transform: uppercase;
+  }
+
   .row {
     display: flex;
     align-items: center;
   }
 
+  .bonus{
+    position: relative;
+    .dartImg{
+      position: absolute;
+      max-width: 200px;
+      max-height: 200px;
+      right: 0;
+      top: -66px;
+    }
+    @media screen and (max-width: 1440px){
+      .dartImg{
+      transform:scale(.6);
+      }
+    }
+    @media screen and (max-width: 1024px){
+      .dartImg{
+        transform:scale(.5);
+      }
+    }
+    @media screen and (max-width: 768px){
+      .dartImg{
+        transform:scale(.4);
+        top: -82px;
+      }
+    }
+    @media screen and (max-width: 768px){
+      .dartImg{
+        transform:scale(.4);
+        top: -82px;
+      }
+    }
+    @media screen and (max-width: 550px){
+      .dartImg{
+        transform:scale(.3);
+        top: -108px;
+        right:-60px;
+      }
+    }
+    @media screen and (max-width: 550px){
+      .dartImg{
+
+        right:-25px;
+      }
+    }
+  }
   .containerBig {
     max-width: 1734px;
     margin: 0 auto;
@@ -112,8 +166,45 @@ span{
     background-image: url("../../images/visa/bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    img{
+
+    .textComforter{
       position: absolute;
+      bottom: 70px;
+      right: 0;
+      &::before{
+        right: 100% ;
+        left: auto;
+      }
+      @media screen and (max-width: 1024px){
+        bottom: 20px;
+        transform: scale(0.33);
+        right: -100px;
+      }
+      @media screen and (max-width: 768px){
+        bottom: 5px;
+      }
+      @media screen and (max-width: 550px){
+        bottom: 5px;
+        transform: scale(0.23);
+        right: -150px;
+      }
+      @media screen and (max-width: 450px){
+        bottom: -15px;
+
+      }
+    }
+    img {
+      position: absolute;
+      @media screen and (max-width: 1100px) {
+        left: -100px;
+      }
+      @media screen and (max-width: 768px) {
+        left: -160px;
+      }
+      @media screen and (max-width: 450px) {
+        left: -210px;
+
+      }
     }
     @media screen and (max-width: 1440px) {
       padding: 130px 0 220px 0px;
@@ -140,5 +231,14 @@ span{
         transform: scale(.2);
       }
     }
+  }
+  @media screen and (max-width: 1024px){
+    padding: 130px 0 200px;
+  }
+  @media screen and (max-width: 768px){
+    padding: 80px 0 150px;
+  }
+  @media screen and (max-width: 450px){
+    padding: 80px 0 50px;
   }
 }

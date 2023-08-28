@@ -26,7 +26,7 @@ const Checkout = () => {
     const {t} = useTranslation();
     const {coursesList} = useSelector(store => store.user.user)
     const dispatch = useDispatch()
-
+const errorObj={};
     console.log('ENV', process.env.PAYMENT_BACKEND)
     console.log('ENV', process.env.BACKAND_URL)
     useEffect(() => {
@@ -52,23 +52,26 @@ const Checkout = () => {
         window.history.replaceState(null, '', window.location.pathname);
     }
 
-    const createPayment = async (values) => {
-        console.log('payment',values)
-        const response = await paymentApi.post(`/payment`,{
-            amount: {
-                    value: totalPrice,
-                    currency: "EUR"
-                },
-            metadata:{
-                checkoutItems,
-                name:values.name,
-                email:values.email,
-                address:values.address,
-                phone:values.phone,
-            }
-        })
-        console.log(response.data)
-        navigate(response.data)
+    const createPayment = async (event,values) => {
+        event.preventDefault()
+
+        if(values.name && values.phone && values.email){
+            const response = await paymentApi.post(`/payment`,{
+                amount: {
+                        value: totalPrice,
+                        currency: "EUR"
+                    },
+                metadata:{
+                    checkoutItems,
+                    name:values.name,
+                    email:values.email,
+                    address:values.address,
+                    phone:values.phone,
+                }
+            })
+            console.log(response.data)
+            navigate(response.data)
+        }
     }
 
     return (
@@ -94,15 +97,20 @@ const Checkout = () => {
                                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                                ) {
                                    errors.email = 'Invalid email address';
+                                   errorObj.email = 'Invalid email address';
+                               }
+
+                               if (!values.phone) {
+                                   errors.phone = 'Required';
+                                   errorObj.phone = 'Required';
+                               }
+
+                               if (!values.name) {
+                                   errors.name = 'Required';
+                                   errorObj.name = 'Required';
                                }
 
                                return errors;
-                           }}
-                           onSubmit={(values, {setSubmitting}) => {
-                               setTimeout(() => {
-                                   alert(JSON.stringify(values, null, 2));
-                                   setSubmitting(false);
-                               }, 400);
                            }}
                        >
                            {({
@@ -118,7 +126,7 @@ const Checkout = () => {
                              }) => (
                                <form
                                    className={styles.form}
-                                   onSubmit={handleSubmit}
+                                   onSubmit={(event) =>createPayment(event,values, errors)}
                                >
                                    <div className={styles.formContainer}>
                                        <div>
@@ -131,11 +139,13 @@ const Checkout = () => {
                                                onBlur={handleBlur}
                                                value={values.name}
                                            />
-                                           {errors.name && touched.name && errors.name}
+                                           <p className={styles.error}>{errors.name && touched.name && errors.name}</p>
+
                                        </div>
                                        <div>
                                            <label className="text40" htmlFor="phone">{t('checkout.text3')}</label>
-                                           <Field name="phone" component={Phone}/>
+                                           <Field name="phone"  component={Phone}/>
+                                           <p className={styles.error}>{errors.phone && touched.phone && errors.phone}</p>
                                        </div>
 
                                        <div>
@@ -149,6 +159,7 @@ const Checkout = () => {
                                                value={values.address}
                                            />
                                            {errors.address && touched.address && errors.address}
+
                                        </div>
                                        <div>
                                            <label className="text40" htmlFor="email">{t('checkout.text5')}</label>
@@ -166,7 +177,7 @@ const Checkout = () => {
                                    <ProductsList totalPrice={totalPrice} coursesList={coursesList}/>
                                    <div className={styles.btnBlock}>
                                        <UIButton onClick={handleRemove} teal>Отменить</UIButton>
-                                       <UIButton type="submit" disabled={isSubmitting} onClick={() => createPayment(values)} teal>Оплатить</UIButton>
+                                       <UIButton type="submit" teal>Оплатить</UIButton>
                                    </div>
 
                                    {/*<button type="submit" disabled={isSubmitting}>*/}

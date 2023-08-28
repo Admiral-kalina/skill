@@ -1,6 +1,14 @@
 .root {
-  padding-top: 120px;
-
+  padding: 120px 0 350px;
+@media screen and (max-width: 1024px){
+  padding: 100px 0 100px;
+}
+  @media screen and (max-width: 768px){
+    padding: 80px 0 50px;
+  }
+  @media screen and (max-width: 450px){
+    padding: 80px 0 30px;
+  }
   a {
     text-decoration: underline;
   }
@@ -51,7 +59,21 @@
     }
 
     button {
+      width: fit-content;
       max-width: 561px;
+      padding: 0 50px 0 15px;
+      &:before{
+        top: 52%;
+      }
+
+    }
+
+    @media screen and (max-width: 1024px) {
+      button {
+        &:before{
+          top: 44%;
+        }
+      }
     }
 
     @media screen and (max-width: 1200px) {
@@ -76,7 +98,7 @@
       button {
         text-align: center;
         max-width: 200px;
-
+        padding: 0 15px 0 15px;
         &:before {
           display: none;
         }
@@ -913,7 +935,10 @@
         padding: 30px 0 20px 15px;
       }
       .box {
-        padding: 0 15px 0 25px;
+        padding: 0 15px 20px 25px;
+        @media screen and (max-width: 450px){
+          padding: 0 15px 0 25px;
+        }
       }
       .btnBlock {
         height: 50px;
@@ -957,3 +982,10 @@
   }
 }
 
+.stars {
+  padding-top: 10px;
+  svg{
+    width: 24px !important;
+    height: 24px !important;
+  }
+}

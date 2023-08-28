@@ -1,6 +1,7 @@
-import React from 'react';
-import {Link} from "gatsby";
-
+import React, {useEffect} from 'react';
+import {Link, navigate} from "gatsby";
+import {useTranslation} from "react-i18next";
+import { Audio } from 'react-loader-spinner'
 //components
 import {UIButton} from "../UI/Button/UIButton";
 
@@ -16,14 +17,54 @@ import team2 from "../../images/instruments/team2.png";
 import team3 from "../../images/instruments/team3.png";
 import rating from "../../images/instruments/rating.png";
 import vector from "../../images/instruments/vector.png";
-import {useTranslation} from "react-i18next";
+import Loader from "../UI/Loader/Loader";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchInstrumentCource} from "../../features/instrumentsCourseSlice/instrumentsCourseSlice";
+import {fetchFundingYoutube} from "../../features/fundingYoutubeSlice/fundingYoutubeSlice";
+import StarRatings from "react-star-ratings/build/star-ratings";
+import InstrumentsPayment from "./instrumentsPayment";
 import FeedbackSlice from "../../features/feedback/feedbackSlice";
 import SwiperFeedback from "../SwiperComponent/SwiperFeedback";
-import Footer from "../Footer/Footer";
+import {addUserCurse} from "../../features/userSlice/userSlice";
+
 
 
 const Instruments = () => {
+    const dispatch = useDispatch();
     const {t} = useTranslation();
+    const {language} = useSelector(store => store.user.user);
+
+    const handlePayClick = () => {
+        dispatch(addUserCurse(course))
+        navigate('/checkout')
+    }
+
+    useEffect(() => {
+        dispatch(fetchInstrumentCource(language.toLowerCase()))
+    },[language])
+
+
+    const {instrumentPost, isLoading, error} = useSelector(res => res.instrumentCourse)
+
+    const course = instrumentPost.attributes
+
+
+    if (isLoading) {
+        return (
+            <div>
+                 <Loader local={false}/>
+            </div>
+        )
+    }
+
+    if (error) {
+        console.log(error)
+        return (
+            <div>
+                ...error while loading slider
+            </div>
+        )
+    }
 
     return (
         <div className={styles.root}>
@@ -37,7 +78,7 @@ const Instruments = () => {
                             <UIButton blueLight>{t('start.box1.btn1')}</UIButton>
                         </div>
                         <div className="btnContainer">
-                            <UIButton blueLight>{t('start.box1.btn2')}</UIButton>
+                            <UIButton onClick={handlePayClick} blueLight>{t('start.box1.btn2')}</UIButton>
                         </div>
                     </div>
                 </div>
@@ -203,33 +244,14 @@ const Instruments = () => {
                 </div>
             </div>
             <div className={styles.details}>
-              <div className={styles.container}>
-                  <div className={styles.box}>
-                      <p className={`${styles.title} text64`}>{t('start.box10.text1')}</p>
-                      <div className={styles.content}>
-                          <p className="text36">Курс проходит в форме онлайн - практикума 2 раза в неделю по 1,5 часа + 1 индивидуальное занятие.</p>
-                          <p className="text36">Формат обучения - вебинары, видеолекции, практические задания.Мы используем платформу ZOOM и предоставляем доступ к записям на 6 месяцев.</p>
-                          <p className="text36">Если остались вопросы, пишите на <a href="mailto:skilltostart@gmail.com">skilltostart@gmail.com</a></p>
-                          <p className="text36">Сомневаетесь? Почитайте наш <a href="https://t.me/skilltostart">Телеграм канал.</a></p>
-                          <img src={rating} alt="rating"/>
-                          <p className={`${styles.discount} text36`}>Стоимость участия — <span>€900</span></p>
-                          <p className={`${styles.price} text48`}>Специальная цена <span>€540</span></p>
-                          <div className={styles.btnBlock}>
-                              <UIButton red><Link to={'/'}>ОПЛАТИТЬ КУРС</Link></UIButton>
-                          </div>
-                      </div>
-                      <div className={styles.comforterBlock}>
-                          <img src={vector} alt="img"/>
-                          <p className="textComf">{t('start.box10.text2')}</p>
-                      </div>
-                  </div>
-              </div>
+             <InstrumentsPayment handlePayClick={handlePayClick} course={course}/>
             </div>
             <div className={styles.feedback}>
-                {/*<SwiperFeedback isPageInstruments={true}/>*/}
+                <SwiperFeedback isPageInstruments={true}/>
             </div>
         </div>
     );
 };
 
 export default Instruments;
+

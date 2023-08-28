@@ -277,6 +277,8 @@ button {
     &::before {
       position: absolute;
       right: 5%;
+      top: 56%;
+      transform: translate(0, -50%);
       content: url("../images/btnArrow.svg");
     }
   }
@@ -286,8 +288,7 @@ button {
       white-space: nowrap;
       font-size: 26px;
       height: 80px;
-      max-width: 440px;
-      padding: 5px 30px 0;
+      padding: 5px 50px 0;
 
     }
   }
@@ -296,8 +297,9 @@ button {
       font-size: 20px;
       height: 60px;
       &::before {
-        transform: scale(0.6);
+        top: 47%;
         right: 30px;
+        transform: scale(0.6) translate(0, -50%);
       }
     }
   }
@@ -315,7 +317,7 @@ button {
     button {
       font-size: 12px;
       height: 47px;
-      max-width: 186px;
+
     }
   }
 }
@@ -393,11 +395,33 @@ button {
 }
 
 .feedbackSlider{
-
+.swiper{
+  max-width: 1321px;
+}
   .swiper-wrapper{
-    padding-top: 100px;
+    padding: 100px 0 15px;
     @media screen and (max-width: 1024px){
-      padding: 0;
+      padding: 0 0 15px;
     }
+  }
+}
+
+.loaderGlobal{
+  position: relative;
+  height: 100vh;
+  svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.loaderLocal{
+  position: relative;
+  height: 20vh;
+  svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 }

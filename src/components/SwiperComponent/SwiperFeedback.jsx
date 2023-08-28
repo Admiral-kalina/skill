@@ -1,23 +1,23 @@
 import React, {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {fetchFeedbackSlider} from "../../features/feedback/feedbackSlice";
+import StarRatings from "react-star-ratings/build/star-ratings";
+import {Link} from "gatsby";
+import {UIButton} from "../UI/Button/UIButton";
 
 // swiper
 import {Swiper, SwiperSlide,} from "swiper/react";
-import {Grid, Navigation} from "swiper/modules";
+import {Grid} from "swiper/modules";
 
 // styles
 import * as styles from './swiper.module.scss';
 import "swiper/css/bundle";
 import 'swiper/css/navigation';
-import WhyNetherlands from "../Home/components/WhyNetherlands/WhyNetherlands";
-import {fetchFeedbackSlider} from "../../features/feedback/feedbackSlice";
-import StarRatings from "react-star-ratings/build/star-ratings";
 
 //assets
-import background from "../../images/feedbackVector.svg"
-import {getWindowType} from "../../helpers/getWindowType";
-import {Link} from "gatsby";
-import {UIButton} from "../UI/Button/UIButton";
+import girlBottom from "../../images/instruments/girlBottom.png"
+import Loader from "../UI/Loader/Loader";
+
 
 
 const SwiperFeedback = ({isPageInstruments}) => {
@@ -27,10 +27,7 @@ const SwiperFeedback = ({isPageInstruments}) => {
     const {feedbackSlides, isLoading, error} = useSelector(res => res.feedback)
     const dispatch = useDispatch()
 
-    const isMobile = true
-
-    console.log('Large', isMobile)
-
+    console.log('FEES',feedbackSlides)
 
     useEffect(() => {
         dispatch(fetchFeedbackSlider(language.toLowerCase()))
@@ -61,7 +58,7 @@ const SwiperFeedback = ({isPageInstruments}) => {
     if (isLoading) {
         return (
             <div>
-                ...loading
+                <Loader local={true}/>
             </div>
         )
     }
@@ -87,7 +84,13 @@ const SwiperFeedback = ({isPageInstruments}) => {
                     <p className={`textComforter ${styles.textComforter}`}>Еще больше!</p>
                 </>
             }
-            <div className={`${styles.container} feedbackSlider`}>
+            <div className={`${styles.container} ${isPageInstruments? styles.instrumentContainer : ''} feedbackSlider`}>
+                {isPageInstruments ?
+                    <img className={styles.girl} src={girlBottom} alt="picture"/>
+                    :
+                    <></>
+                }
+
                 <Swiper
                     modules={[Grid]}
                     slidesPerView={ 1 }
