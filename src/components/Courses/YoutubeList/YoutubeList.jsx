@@ -9,6 +9,7 @@ import * as styles from "./youtubeList.module.scss";
 import girl from "../../../images/courses/girl.png";
 import youTube from "../../../images/home/youtube.png";
 import {Link} from "gatsby";
+import Loader from "../../UI/Loader/Loader";
 
 
 const YoutubeList = ({mainPage}) => {
@@ -24,7 +25,7 @@ const YoutubeList = ({mainPage}) => {
     if (isLoading) {
         return (
             <div>
-                ...loading
+                <Loader local={true}/>
             </div>
         )
     }

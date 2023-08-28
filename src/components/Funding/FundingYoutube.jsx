@@ -9,6 +9,7 @@ import conversation from "../../images/funding/conversation.png";
 import girl from "../../images/funding/girl.png";
 import vector from "../../images/funding/vector.svg";
 import {useTranslation} from "react-i18next";
+import Loader from "../UI/Loader/Loader";
 
 
 const FundingYoutube = () => {
@@ -26,7 +27,7 @@ const FundingYoutube = () => {
     if (isLoading) {
         return (
             <div>
-                ...loading
+                <Loader local={true}/>
             </div>
         )
     }

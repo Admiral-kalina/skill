@@ -61,7 +61,7 @@ const Instruments = () => {
         console.log(error)
         return (
             <div>
-                ...error while loading slider
+                ...error while page
             </div>
         )
     }

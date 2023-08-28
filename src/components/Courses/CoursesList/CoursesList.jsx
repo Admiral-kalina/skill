@@ -17,6 +17,7 @@ import {navigate} from "gatsby";
 import {redirect} from "react-router-dom";
 import {addUserCurse} from "../../../features/userSlice/userSlice";
 import {locInGraphQlToLocInFile} from "gatsby/dist/query/error-parser";
+import Loader from "../../UI/Loader/Loader";
 
 
 
@@ -33,7 +34,7 @@ export const CoursesList = () => {
     if (isLoading) {
         return (
             <div>
-                ...loading
+                <Loader local={true}/>
             </div>
         )
     }

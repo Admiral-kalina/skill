@@ -10,6 +10,7 @@ import {Navigation} from "swiper/modules";
 import * as styles from './swiper.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Loader from "../UI/Loader/Loader";
 
 
 
@@ -48,7 +49,7 @@ export const SwiperComponent = ({endpoint}) => {
     if (isLoading) {
         return (
             <div>
-                ...loading
+                <Loader local={true}/>
             </div>
         )
     }

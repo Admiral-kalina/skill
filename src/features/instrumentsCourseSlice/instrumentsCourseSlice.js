@@ -11,7 +11,7 @@ const initialState = {
 export const fetchInstrumentCource = createAsyncThunk(
     'instrument/fetchInstrumentCource',
     async (language) => {
-        const res = await strapiApi.get(`/api/instrument-course?locale=${language}&populate=*`)
+        const res = await strapiApi.get(`/api/instrument-course-information?locale=${language}&populate=*`)
         return await res.data
     }
 )
