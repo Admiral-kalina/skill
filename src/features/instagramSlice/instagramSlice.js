@@ -1,6 +1,6 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
 import {instagramApi} from "../../api";
-import axios from "axios";
+
 
 const initialState = {
     instagramPosts: [],
@@ -11,10 +11,14 @@ const initialState = {
 export const fetchInstagramData = createAsyncThunk(
     'instagram/fetchInstagramData',
     async () => {
-        console.log('FETCH')
-        const res = await axios.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&&access_token=IGQWRPX0l2c3VHOGExdEpWX1dFQWJubHlSa2FRUWJwSWJhRS1GamF1cjFvbUNCNXNNVUo2SWR6cW93NExRVXVLX1VGNHJjNDNIRU1LM2NoT2hKNkJhMFBhZAXo0aFpma29NUWFMTkFxeUdMT0dENzJHQ3RMVHQ2Q3MZD')
+        const res = await instagramApi.get('',{
+            headers: {
+                'access_token': process.env.INSTAGRAM_TOKEN,
+                'limit': '5',
+                'fields': 'id,media_type,media_url,caption'
+            }
+        })
 
-        console.log(res)
         return await res.data
     }
 )
