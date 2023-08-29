@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 // styles
 import * as styles from "./blog.module.scss"
 import axios from "axios";
+import Loader from "../UI/Loader/Loader";
 
 
 const Blog = () => {
@@ -17,9 +18,24 @@ const Blog = () => {
         dispatch(fetchInstagramData())
     }, [])
 
-    const {instagramPosts} = useSelector(state => state.instagram);
+    const {instagramPosts, isLoading, error} = useSelector(state => state.instagram);
 
-    console.log(instagramPosts)
+    if (isLoading) {
+        return (
+            <div>
+                <Loader local={false}/>
+            </div>
+        )
+    }
+    if (error) {
+
+        return (
+            <div>
+                ...error while loading instagram posts
+            </div>
+        )
+    }
+
 
     return (
         <div className={styles.wrapper}>
