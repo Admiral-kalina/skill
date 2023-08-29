@@ -71,14 +71,20 @@
   button {
     position: relative;
     bottom: 0;
+    padding: 0 50px 0 20px;
     margin-top: 126px;
-
+    width: fit-content;
+    &::before {
+      top: 51%;
+    }
     @media screen and (max-width: 1440px) {
       margin-top: 116px!important;
     }
     @media screen and (max-width: 1024px) {
       margin-top: 106px!important;
-
+      &::before {
+        top: 44%;
+      }
     }
     @media screen and (max-width: 768px) {
       margin-top: 96px!important;

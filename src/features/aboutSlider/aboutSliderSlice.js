@@ -10,6 +10,7 @@ const initialState = {
 export const fetchAboutSlider = createAsyncThunk(
     'aboutSlider/fetchAboutSlider',
     async (endpoint) => {
+        console.log(endpoint)
         const res = await strapiApi.get(`/api/${endpoint}?populate=*`)
         console.log(res)
         return await res.data

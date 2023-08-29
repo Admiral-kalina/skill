@@ -62,17 +62,23 @@ export const SwiperComponent = ({endpoint}) => {
         )
     }
 
+
+
     return (
         <div className={styles.carouselBlock}>
             <div className={styles.carouselButtons}>
-                <button
-                    className={`${styles.btnPrev} ${buttonsActive.btnPrev ? '' :styles.btnDisabled }`}
-                    onClick={handlePrev}>
-                </button>
-                <button
-                    className={`${styles.btnNext} ${buttonsActive.btnNext ? '' : styles.btnDisabled }`}
-                    onClick={handleNext}>
-                </button>
+                <div className={styles.blockPrev}>
+                    <button
+                        className={`${styles.btnPrev} ${buttonsActive.btnPrev ? styles.btnActive : styles.btnDisabled}`}
+                        onClick={handlePrev}>
+                    </button>
+                </div>
+                <div className={styles.blockNext}>
+                    <button
+                        className={`${styles.btnNext} ${buttonsActive.btnNext ? styles.btnActive : styles.btnDisabled}`}
+                        onClick={handleNext}>
+                    </button>
+                </div>
             </div>
             <Swiper
                 modules={[Navigation]}

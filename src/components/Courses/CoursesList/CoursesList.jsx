@@ -18,13 +18,13 @@ import {redirect} from "react-router-dom";
 import {addUserCurse} from "../../../features/userSlice/userSlice";
 import {locInGraphQlToLocInFile} from "gatsby/dist/query/error-parser";
 import Loader from "../../UI/Loader/Loader";
+import {useTranslation} from "react-i18next";
 
 
 
 export const CoursesList = () => {
     const {language} = useSelector(store => store.user.user);
     const {courses, isLoading, error} = useSelector(res => res.courses)
-    const [payLink, setPayLink] = useState('')
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -47,20 +47,19 @@ export const CoursesList = () => {
         )
     }
 
-
     return (
         <div className={styles.container}>
             <div className={styles.row}>
                 {courses.map(el =>
                     <CoursesElement attributes={el.attributes}/>
                 )}
-
             </div>
         </div>
     );
 };
 
 const CoursesElement = ({attributes}) => {
+    const {t} = useTranslation();
     const dispatch = useDispatch();
 
     const handleClick = () => {
@@ -84,7 +83,7 @@ const CoursesElement = ({attributes}) => {
                 </div>
                 <div className={styles.priceBlock}>
                     <p className="price">{attributes.price}€</p>
-                    <UIButton onClick={handleClick} teal>Добавить в корзину</UIButton>
+                    <UIButton onClick={handleClick} teal>{t('skills.btnAdd')}</UIButton>
                 </div>
             </div>
             <img className={styles.preview} src={url} alt="course"/>

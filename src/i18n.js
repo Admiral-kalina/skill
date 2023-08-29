@@ -372,6 +372,8 @@ i18n
                     },
                     skills: {
                         title: 'NEW SKILLS',
+                        btn:'launch soon',
+                        btnAdd:'Add to basket',
                         box1: {
                             text1: 'You have moved outside your country or are just preparing to move. The key fear, and for some even a serious brake when moving, is the fear of losing one\'s status. Go down a few steps in your career or even completely abandon your previous experience and become a nanny, a nurse, a cleaner.',
                             text2: 'It\'s time to think about how to make money in a new country, what skills are in demand and where to start. Perhaps you did not even think about the existence of some interesting professional lines or did not know about them. Now you have time and energy to think about what to do.',
@@ -948,6 +950,8 @@ i18n
                     },
                     skills: {
                         title: 'НОВЫЕ НАВЫКИ',
+                        btn: 'Cкоро старт',
+                        btnAdd:'Добавить в корзину',
                         box1: {
                             text1: 'Вы переехали за пределы свой страны или только готовитесь к переезду. Ключевой страх, а для некторых даже серьезный тормоз при переезде - это боязнь потерять свой статус. Спуститься по карьере на несколько ступеней ниже или даже совсем отказаться от своего предыдущего опыта и стать няней, сиделкой, уборщицей.',
                             text2: 'Пора задуматься о том, как зарабатывать в новой стране, какие навыки востребованы и с чего можно начать. Возможно о существовании каких-то интересных профессиональных линий вы даже не задумывались или не знали про них. Сейчас у вас есть время и силы подумать о том, чем заниматься.',

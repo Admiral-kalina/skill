@@ -19,7 +19,6 @@ import girlBottom from "../../images/instruments/girlBottom.png"
 import Loader from "../UI/Loader/Loader";
 
 
-
 const SwiperFeedback = ({isPageInstruments}) => {
     const {language} = useSelector(store => store.user.user);
     const [buttonsActive, setButtonsActive] = useState({btnPrev: false, btnNext: true})
@@ -27,7 +26,7 @@ const SwiperFeedback = ({isPageInstruments}) => {
     const {feedbackSlides, isLoading, error} = useSelector(res => res.feedback)
     const dispatch = useDispatch()
 
-    console.log('FEES',feedbackSlides)
+    console.log('FEES', feedbackSlides)
 
     useEffect(() => {
         dispatch(fetchFeedbackSlider(language.toLowerCase()))
@@ -84,7 +83,8 @@ const SwiperFeedback = ({isPageInstruments}) => {
                     <p className={`textComforter ${styles.textComforter}`}>Еще больше!</p>
                 </>
             }
-            <div className={`${styles.container} ${isPageInstruments? styles.instrumentContainer : ''} feedbackSlider`}>
+            <div
+                className={`${styles.container} ${isPageInstruments ? styles.instrumentContainer : ''} feedbackSlider`}>
                 {isPageInstruments ?
                     <img className={styles.girl} src={girlBottom} alt="picture"/>
                     :
@@ -93,10 +93,10 @@ const SwiperFeedback = ({isPageInstruments}) => {
 
                 <Swiper
                     modules={[Grid]}
-                    slidesPerView={ 1 }
+                    slidesPerView={1}
                     spaceBetween={50}
                     grid={{
-                        rows: 2 ,
+                        rows: 2,
                         fill: "row",
 
                     }}
@@ -111,7 +111,7 @@ const SwiperFeedback = ({isPageInstruments}) => {
                     breakpoints={{
                         1024: {
                             slidesPerView: 2,
-                            spaceBetween:25,
+                            spaceBetween: 25,
                             grid: {
                                 rows: 1,
                                 fill: "row",
@@ -143,14 +143,18 @@ const SwiperFeedback = ({isPageInstruments}) => {
                     )}
                 </Swiper>
                 <div className={`${styles.carouselButtons} ${styles.feedbackButtons}`}>
-                    <button
-                        className={`${styles.btnPrev} ${buttonsActive.btnPrev ? '' : styles.btnDisabled}`}
-                        onClick={handlePrev}>
-                    </button>
-                    <button
-                        className={`${styles.btnNext} ${buttonsActive.btnNext ? '' : styles.btnDisabled}`}
-                        onClick={handleNext}>
-                    </button>
+                    <div className={styles.blockPrev}>
+                        <button
+                            className={`${styles.btnPrev} ${buttonsActive.btnPrev ? styles.btnActive : styles.btnDisabled}`}
+                            onClick={handlePrev}>
+                        </button>
+                    </div>
+                    <div className={styles.blockNext}>
+                        <button
+                            className={`${styles.btnNext} ${buttonsActive.btnNext ? styles.btnActive : styles.btnDisabled}`}
+                            onClick={handleNext}>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

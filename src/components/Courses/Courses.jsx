@@ -37,7 +37,7 @@ export const Courses = () => {
                             <div className={styles.textBlock}>
                                 <p className="text36">{t('skills.box2.text2')}<br/>{t('skills.box1.text3')}</p>
                                 <div className={`btnContainer ${styles.buttonContainer}`}>
-                                    <UIButton white>Скоро старт</UIButton>
+                                    <UIButton white>{t('skills.btn')}</UIButton>
                                 </div>
                             </div>
                             <img src={firstLeft} alt="firstLeft" className={styles.imgLeft}/>
@@ -55,7 +55,7 @@ export const Courses = () => {
                             <div className={styles.textBlock}>
                                 <p className="text36">{t('skills.box3.text2')}</p>
                                 <div className={`btnContainer ${styles.buttonContainer}`}>
-                                    <UIButton white>{t('skills.box3.btn1')}</UIButton>
+                                    <UIButton white>{t('skills.btn')}</UIButton>
                                 </div>
                             </div>
 

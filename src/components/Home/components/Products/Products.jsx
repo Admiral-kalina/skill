@@ -9,6 +9,7 @@ import products4 from "../../../../images/home/products4.png";
 import productVector from "../../../../images/arrow.svg"
 import vector from "../../../../images/home/productsVector.svg";
 import {useTranslation} from "react-i18next";
+import {Link} from "gatsby";
 
 const Products = () => {
     const {t} = useTranslation();
@@ -28,7 +29,7 @@ const Products = () => {
                                 {t('home.block5.box1.text2')}
                             </p>
                             <button className={styles.button}>
-                                Подробнее{" "}
+                                <Link to={''}>Подробнее</Link>
                                 <span>
                 <img className={styles.productvector} src={productVector} alt=""/>
               </span>
@@ -45,7 +46,7 @@ const Products = () => {
                                 {t('home.block5.box2.text2')}
                             </p>
                             <button className={styles.button}>
-                                Подробнее{" "}
+                                <Link to={''}>Подробнее</Link>
                                 <span>
                             <img className={styles.productvector} src={productVector} alt=""/>
               </span>
@@ -63,7 +64,7 @@ const Products = () => {
                                 {t('home.block5.box3.text2')}
                             </p>
                             <button className={styles.button}>
-                                Подробнее
+                                <Link to={''}>Подробнее</Link>
                                 <span>
                 <img className={styles.productvector} src={productVector} alt=""/>
               </span>
@@ -80,7 +81,7 @@ const Products = () => {
                                 {t('home.block5.box4.text2')}
                             </p>
                             <button className={styles.button}>
-                                Подробнее
+                                <Link to={''}>Подробнее</Link>
                                 <span>
                 <img className={styles.productvector} src={productVector} alt=""/>
               </span>

@@ -20,11 +20,13 @@
     margin: 0 auto;
   }
 
+
   span {
     font-weight: 500;
   }
 
   button {
+    width: fit-content;
     margin-top: 126px;
     white-space: nowrap;
     &::before{
@@ -36,7 +38,7 @@
     @media screen and (max-width: 1024px) {
       margin-top: 106px!important;
       padding-left: 20px;
-      max-width: 265px;
+
     }
     @media screen and (max-width: 768px) {
       margin-top: 96px!important;
