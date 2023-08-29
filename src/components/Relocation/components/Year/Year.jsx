@@ -9,6 +9,7 @@ import {UIButton} from "../../../UI/Button/UIButton";
 //assets
 import girl from "../../../../images/relocation/yearGirl.png"
 import {useTranslation} from "react-i18next";
+import {Link} from "gatsby";
 
 const Year = () => {
     const {t} = useTranslation();
@@ -24,7 +25,7 @@ const Year = () => {
                         <img className={styles.girl} src={girl} alt="img"/>
                     </div>
                     <div className={`btnContainer ${styles.btnContainer}`}>
-                        <UIButton blueLight>{t('relocation.orientation.btn1')}</UIButton>
+                        <Link to={'/visa'}> <UIButton blueLight> {t('relocation.orientation.btn1')}</UIButton></Link>
                     </div>
                 </div>
             </div>

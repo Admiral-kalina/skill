@@ -29,7 +29,7 @@ const Products = () => {
                                 {t('home.block5.box1.text2')}
                             </p>
                             <button className={styles.button}>
-                                <Link to={''}>Подробнее</Link>
+                                <Link to={'/relocation'}>{t('home.btn3')}</Link>
                                 <span>
                 <img className={styles.productvector} src={productVector} alt=""/>
               </span>
@@ -46,7 +46,7 @@ const Products = () => {
                                 {t('home.block5.box2.text2')}
                             </p>
                             <button className={styles.button}>
-                                <Link to={''}>Подробнее</Link>
+                                <Link to={'/startupviza'}>{t('home.btn3')}</Link>
                                 <span>
                             <img className={styles.productvector} src={productVector} alt=""/>
               </span>
@@ -64,7 +64,7 @@ const Products = () => {
                                 {t('home.block5.box3.text2')}
                             </p>
                             <button className={styles.button}>
-                                <Link to={''}>Подробнее</Link>
+                                <Link to={'/visa'}>{t('home.btn3')}</Link>
                                 <span>
                 <img className={styles.productvector} src={productVector} alt=""/>
               </span>
@@ -81,7 +81,7 @@ const Products = () => {
                                 {t('home.block5.box4.text2')}
                             </p>
                             <button className={styles.button}>
-                                <Link to={''}>Подробнее</Link>
+                                <Link to={'/funding'}>{t('home.btn3')}</Link>
                                 <span>
                 <img className={styles.productvector} src={productVector} alt=""/>
               </span>

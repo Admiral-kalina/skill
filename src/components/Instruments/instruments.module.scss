@@ -56,6 +56,9 @@
       margin: 90px 0 0 0;
       display: flex;
       justify-content: center;
+      a{
+        text-decoration: none;
+      }
     }
 
     button {
@@ -688,6 +691,7 @@
         max-width: 337px;
 
         a {
+          text-decoration: none;
           color: #fff;
           position: relative;
 

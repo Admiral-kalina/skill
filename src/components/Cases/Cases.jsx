@@ -40,9 +40,9 @@ const Cases = () => {
                             <div className={`${styles.column} ${styles.columnRight}`}>
                                 <img src={case1} alt="img"/>
                                 <div className={`${styles.comforterBlock} textComforter`}>
-                                    <p className="">Читай!</p>
-                                    <p className="">Смотри!</p>
-                                    <p className="">Вдохновляйся!</p>
+                                    <p className="">{t('cases.textComf1')}</p>
+                                    <p className="">{t('cases.textComf2')}</p>
+                                    <p className="">{t('cases.textComf3')}</p>
                                 </div>
                             </div>
                         </div>

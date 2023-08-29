@@ -27,13 +27,19 @@ i18n
                         text5: 'Funding',
                         text6: 'Cases',
                         text7: 'Courses and workshops',
-                        text8:'Startup tools',
+                        text8: 'Startup tools',
                         text9: 'About us',
-                        text10:'Contacts',
+                        text10: 'Contacts',
                         text11: 'Blog',
                     },
                     home: {
                         title: 'Relocating businesses and individuals to the Netherlands.',
+                        btn1: 'Register for consultation ',
+                        btn2:'Watch programs',
+                        btn3:'More details',
+                        btn4:'About the Netherlands',
+                        why:'Why the Netherlands?',
+                        textComf:'Even more!',
                         subtitle: {
                             part1: 'All types of',
                             part2: 'residence permits Immigration support for startups and businesses',
@@ -82,7 +88,7 @@ i18n
                         },
                         block5: {
                             title: 'Our products',
-                            link1:'More information',
+                            link1: 'More information',
                             box1: {
                                 text1: 'RELOCATION to the Netherlands without stress',
                                 text2: 'Individual support for startup and self-employed visa. For those who want a quick result. Turnkey support and soft landing! For teams and individuals.',
@@ -200,6 +206,9 @@ i18n
                         },
                     },
                     cases: {
+                        textComf1:'Read it',
+                        textComf2:'Look!',
+                        textComf3:'Be inspired!',
                         title: 'CASES',
                         case: {
                             title: 'case 1.',
@@ -310,7 +319,7 @@ i18n
                             text4: 'After approval by the facilitator and signing an agreement with them, you can apply for a start-up visa at the Dutch consulate at the place of residence (not necessarily in the country of citizenship), as well as come to the Netherlands on a Schengen visa and send a package of documents to the immigration service by mail and wait for the issuance of a residence permit in the Netherlands.',
                             text5: 'It is necessary to provide proof of income of the founder and show income / savings at the rate of 1508 euro per month, that is, 18.096 euro per year. IMPORTANT! These funds are not blocked in the account. You can live on them.',
                             text6: 'Please register for a free online consultation where we will answer questions about your specific situation and help you decide on the best strategy for obtaining a residence permit in the Netherlands.',
-                            btn1: 'Register for consultation  '
+                            btn1: 'Register for consultation '
                         },
                         box4: {
                             title: 'The list of documents for startup visa application',
@@ -344,6 +353,7 @@ i18n
                         }
                     },
                     visa: {
+                        textComf:'Start now!',
                         title: 'Visa Orientation Year',
                         subtitle: 'Zoekjaar visa – residence permit for orientation year in the Netherlands',
                         box1: {
@@ -372,8 +382,8 @@ i18n
                     },
                     skills: {
                         title: 'NEW SKILLS',
-                        btn:'launch soon',
-                        btnAdd:'Add to basket',
+                        btn: 'launch soon',
+                        btnAdd: 'Add to basket',
                         box1: {
                             text1: 'You have moved outside your country or are just preparing to move. The key fear, and for some even a serious brake when moving, is the fear of losing one\'s status. Go down a few steps in your career or even completely abandon your previous experience and become a nanny, a nurse, a cleaner.',
                             text2: 'It\'s time to think about how to make money in a new country, what skills are in demand and where to start. Perhaps you did not even think about the existence of some interesting professional lines or did not know about them. Now you have time and energy to think about what to do.',
@@ -398,6 +408,19 @@ i18n
 
                     },
                     start: {
+                        bonusBtn:'Fill in request form',
+                        courseTitle:'COURSE PROGRAM',
+                        feedTitle:'Alumni about the course',
+                        payment:{
+                            text1:'The course is held in the form of an online workshop 2 times a week for 1.5 hours + 1 individual session.',
+                            text2:'The format of training - webinars, video lectures, practical assignments.We use ZOOM platform and provide access to recordings for 6 months.',
+                            text3:'If you still have questions, write to',
+                            text4:'In doubt? Read our ',
+                            text5:'Telegram channel.',
+                            text6:'Participation fee - ',
+                            text7:'Special Price',
+                            btn1:'PAY COURSE'
+                        },
                         box1: {
                             text1: 'HOW TO LAUNCH A STARTUP IN THE NETHERLANDS IN 12 Lessons',
                             text2: 'The result is a ready application for a startup visa and an understanding of all processes.',
@@ -573,7 +596,7 @@ i18n
                             },
                             btn1: 'Register to check fundraising options',
                             btn2: 'Online workshop Grants and Subsidies',
-                            conduit:'Look!'
+                            conduit: 'Look!'
                         }
                     },
                     checkout: {
@@ -584,12 +607,17 @@ i18n
                         text5: 'Email*',
                         text6: 'Goods in the cart:',
                         text7: 'Total amount:',
-                        text8: '',
+                        btn1: 'Pay',
+                        btn2: 'Cancel'
                     },
                     footer: {
                         text1: 'Contacts',
                         text2: 'Write your e-mail...',
                         text3: 'Send',
+                    },
+                    contacts: {
+                        title: 'Contacts',
+                        text1: 'For advice on relocation, types of residence permits in the Netherlands, startup visas, strategies for moving to the Netherlands, starting a business.',
                     }
                 }
             },//mayak
@@ -603,13 +631,19 @@ i18n
                         text5: 'Финансирование',
                         text6: 'Кейсы',
                         text7: 'Курсы и мастер-классы',
-                        text8:'Инструменты для стартапа',
+                        text8: 'Инструменты для стартапа',
                         text9: 'Про нас',
-                        text10:'Контакты',
+                        text10: 'Контакты',
                         text11: 'Блог',
                     },
                     home: {
+                        btn1: 'Записаться на  консультацию',
+                        btn2:'Посмотреть программы',
+                        btn3:'Подробнее',
+                        btn4:'Информация о Нидерландах',
                         title: 'Релокация в Нидерланды',
+                        why:'Почему Нидерланды?',
+                        textComf:'Еще больше!',
                         subtitle: {
                             part1: 'Все виды внж',
                             part2: 'сопровождение стартапов и бизнеса',
@@ -658,7 +692,7 @@ i18n
                         },
                         block5: {
                             title: 'Наши продукты',
-                            link1:'Подробнее',
+                            link1: 'Подробнее',
                             box1: {
                                 text1: 'РЕЛОКАЦИЯ в Нидерланды без стресса',
                                 text2: 'Индивидуальное сопровождение по стартап и бизнес визе в Нидерланды. Помогаем перевезти семью в безопасную стабильную страну. Для тех, кому нужно все и сразу. Мы сделаем все за вас! Для команд и одиночек.',
@@ -776,6 +810,9 @@ i18n
                         },
                     },
                     cases: {
+                        textComf1:'Читай!',
+                        textComf2:'Смотри!',
+                        textComf3:'Вдохновляйся!',
                         title: 'КЕЙСЫ',
                         case: {
                             title: 'Кейс 1.',
@@ -922,6 +959,7 @@ i18n
                         }
                     },
                     visa: {
+                        textComf:'Начни сейчас!',
                         title: 'Виза Ориентационный Год',
                         subtitle: 'Виза «zoekjaar» (residence permit for orientation year) - ВНЖ ориентационный год в Нидерландах',
                         box1: {
@@ -951,7 +989,7 @@ i18n
                     skills: {
                         title: 'НОВЫЕ НАВЫКИ',
                         btn: 'Cкоро старт',
-                        btnAdd:'Добавить в корзину',
+                        btnAdd: 'Добавить в корзину',
                         box1: {
                             text1: 'Вы переехали за пределы свой страны или только готовитесь к переезду. Ключевой страх, а для некторых даже серьезный тормоз при переезде - это боязнь потерять свой статус. Спуститься по карьере на несколько ступеней ниже или даже совсем отказаться от своего предыдущего опыта и стать няней, сиделкой, уборщицей.',
                             text2: 'Пора задуматься о том, как зарабатывать в новой стране, какие навыки востребованы и с чего можно начать. Возможно о существовании каких-то интересных профессиональных линий вы даже не задумывались или не знали про них. Сейчас у вас есть время и силы подумать о том, чем заниматься.',
@@ -976,6 +1014,20 @@ i18n
 
                     },
                     start: {
+                        bonusBtn:'Оставить Заявку',
+                        courseTitle:'Программа курса',
+                        feedTitle:'Выпускники о курсе',
+                        payment:{
+                          text1:'Курс проходит в форме онлайн - практикума 2 раза в неделю по 1,5 часа + 1 индивидуальное занятие.',
+                          text2:'Формат обучения - вебинары, видеолекции, практические задания.Мы используем платформу ZOOM и предоставляем доступ к записям на 6 месяцев.',
+                          text3:'Если остались вопросы, пишите на',
+                          text4:'Сомневаетесь? Почитайте наш ',
+                          text5:'Телеграм канал.',
+                          text6:'Стоимость участия — ',
+                          text7:'Специальная цена',
+                          btn1:'ОПЛАТИТЬ КУРС'
+                        },
+
                         box1: {
                             text1: 'КАК ЗАПУСТИТЬ СТАРТАП В  ЕВРОПЕ ЗА 12 занятий',
                             text2: 'Результат - готовая заявка на стартап визу и понимание всех процессов.',
@@ -1151,7 +1203,7 @@ i18n
                             },
                             btn1: 'Подбор финансирования',
                             btn2: 'Мастер класс Гранты и Субсидии',
-                            conduit:'Смотри!'
+                            conduit: 'Смотри!'
                         }
                     },
                     checkout: {
@@ -1163,11 +1215,17 @@ i18n
                         text6: 'Товар в корзине:',
                         text7: 'Сумма',
                         text8: '',
+                        btn1: 'Оплатить',
+                        btn2: 'Отменить'
                     },
                     footer: {
                         text1: 'Контакты',
                         text2: 'Напиши свою почту...',
                         text3: 'Отправить',
+                    },
+                    contacts: {
+                        title: 'Контакты',
+                        text1: 'Для консультаций по релокации, видам внж в Нидерландах, стартап визам, стратегии переезда в Нидерланды, запуску бизнеса.',
                     }
                 }
             },

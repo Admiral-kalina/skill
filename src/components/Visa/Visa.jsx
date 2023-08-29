@@ -74,7 +74,7 @@ const Visa = () => {
                 </div>
             </div>
             <div className={styles.full}>
-                <p className={`textComforter ${styles.textComforter}`}>Начни сейчас!</p>
+                <p className={`textComforter ${styles.textComforter}`}>{t('visa.textComf')}</p>
 
                 <div className={styles.container}>
                     <p className="text36">{t('visa.box3.text6')}</p>

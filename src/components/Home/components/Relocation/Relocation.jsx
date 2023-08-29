@@ -22,7 +22,7 @@ const Relocation = () => {
                <div className={styles.body}>
                    <p>{t('home.subtitle.part1')}<br/>{t('home.subtitle.part2')}</p>
                    <div className={styles.button}>
-                       <UIButton blueRounded>Записаться на консультацию</UIButton>
+                       <UIButton blueRounded>{t('home.btn1')}</UIButton>
                    </div>
                </div>
            </div>

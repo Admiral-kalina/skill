@@ -24,10 +24,10 @@ const InstrumentsPayment = ({course, handlePayClick}) => {
             <div className={styles.box}>
                 <p className={`${styles.title} text64`}>{t('start.box10.text1')}</p>
                 <div className={styles.content}>
-                    <p className="text36">Курс проходит в форме онлайн - практикума 2 раза в неделю по 1,5 часа + 1 индивидуальное занятие.</p>
-                    <p className="text36">Формат обучения - вебинары, видеолекции, практические задания.Мы используем платформу ZOOM и предоставляем доступ к записям на 6 месяцев.</p>
-                    <p className="text36">Если остались вопросы, пишите на <a href="mailto:skilltostart@gmail.com">skilltostart@gmail.com</a></p>
-                    <p className="text36">Сомневаетесь? Почитайте наш <a href="https://t.me/skilltostart">Телеграм канал.</a></p>
+                    <p className="text36">{t('start.payment.text1')}</p>
+                    <p className="text36"></p>
+                    <p className="text36">{t('start.payment.text2')} <a href="mailto:skilltostart@gmail.com">skilltostart@gmail.com</a></p>
+                    <p className="text36">{t('start.payment.text3')} <a href="https://t.me/skilltostart"> {t('start.payment.text4')}</a></p>
                     <div className={styles.stars}>
                         <StarRatings
                             starSpacing="4px"
@@ -37,10 +37,10 @@ const InstrumentsPayment = ({course, handlePayClick}) => {
                             name='rating'
                         />
                     </div>
-                    <p className={`${styles.discount} text36`}>Стоимость участия — <span>€{course.oldPrice}</span></p>
-                    <p className={`${styles.price} text48`}>Специальная цена <span>€{course.price}</span></p>
+                    <p className={`${styles.discount} text36`}>{t('start.payment.text6')} <span>€{course.oldPrice}</span></p>
+                    <p className={`${styles.price} text48`}>{t('start.payment.text7')} <span>€{course.price}</span></p>
                     <div className={styles.btnBlock}>
-                        <UIButton onClick={handlePayClick} red>ОПЛАТИТЬ КУРС</UIButton>
+                        <UIButton onClick={handlePayClick} red>{t('start.payment.btn1')} </UIButton>
                     </div>
                 </div>
                 <div className={styles.comforterBlock}>

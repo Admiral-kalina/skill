@@ -57,8 +57,10 @@
       color: red;
       margin: 10px 0 0 10px;
     }
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1440px){
       padding: 0 60px;
+    }
+    @media screen and (max-width: 1024px){
       margin-top: 70px;
     }
     @media screen and (max-width: 768px){

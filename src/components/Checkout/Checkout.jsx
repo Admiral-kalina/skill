@@ -176,8 +176,8 @@ const errorObj={};
                                    </div>
                                    <ProductsList totalPrice={totalPrice} coursesList={coursesList}/>
                                    <div className={styles.btnBlock}>
-                                       <UIButton onClick={handleRemove} teal>Отменить</UIButton>
-                                       <UIButton type="submit" teal>Оплатить</UIButton>
+                                       <UIButton onClick={handleRemove} teal>{t('checkout.btn2')}</UIButton>
+                                       <UIButton type="submit" teal>{t('checkout.btn1')}</UIButton>
                                    </div>
 
                                    {/*<button type="submit" disabled={isSubmitting}>*/}

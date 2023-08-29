@@ -17,9 +17,11 @@ import 'swiper/css/navigation';
 //assets
 import girlBottom from "../../images/instruments/girlBottom.png"
 import Loader from "../UI/Loader/Loader";
+import {useTranslation} from "react-i18next";
 
 
 const SwiperFeedback = ({isPageInstruments}) => {
+    const {t} = useTranslation();
     const {language} = useSelector(store => store.user.user);
     const [buttonsActive, setButtonsActive] = useState({btnPrev: false, btnNext: true})
     const swiperRef = useRef();
@@ -74,13 +76,13 @@ const SwiperFeedback = ({isPageInstruments}) => {
         <div className={styles.feedbackBlock}>
             {isPageInstruments
                 ?
-                <p className={`${styles.instrumentsText} text96 `}>Выпускники о курсе</p>
+                <p className={`${styles.instrumentsText} text96 `}>{t('start.feedTitle')}</p>
                 :
                 <>
                     <div className={`${styles.btnBlock} text40`}>
-                        <Link to={'/#'}><UIButton blueLinear>Информация о Нидерландах</UIButton></Link>
+                        <Link to={'/#'}><UIButton blueLinear>{t('home.btn4')}</UIButton></Link>
                     </div>
-                    <p className={`textComforter ${styles.textComforter}`}>Еще больше!</p>
+                    <p className={`textComforter ${styles.textComforter}`}>{t('home.textComf')}</p>
                 </>
             }
             <div

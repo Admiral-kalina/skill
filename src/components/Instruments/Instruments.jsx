@@ -122,7 +122,7 @@ const Instruments = () => {
                                 <div className={`${styles.column} ${styles.columnRight}`}>
                                     <p className="text36">{t('start.box3.text3')}</p>
                                     <div className={`${styles.btnBlock} btnContainer`}>
-                                        <UIButton white>Оставить Заявку</UIButton>
+                                        <UIButton white>{t('start.bonusBtn')}</UIButton>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@ const Instruments = () => {
                 <div className={styles.bg}>
                     <div className={styles.container}>
                         <div className={styles.mainContent}>
-                            <p className={`${styles.title} text64`}>Программа курса</p>
+                            <p className={`${styles.title} text64`}>{t('start.courseTitle')}</p>
                             <ol>
                                 <li className="text36"><span>{t('start.box4.text1.span1')} </span>{t('start.box4.text1.text1')}</li>
                                 <li className="text36">{t('start.box4.text2.text1')}<span> {t('start.box4.text2.span1')} </span> {t('start.box4.text2.text2')}</li>
@@ -237,7 +237,7 @@ const Instruments = () => {
                         <div className={styles.block}>
                             <p className="text36">{t('start.box9.text6')}</p>
                             <div className={styles.btnBlock}>
-                                <UIButton red><Link to={'/'}>{t('start.box9.btn1')}</Link></UIButton>
+                                <Link to={'/contacts'}> <UIButton red>{t('start.box9.btn1')}</UIButton></Link>
                             </div>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ import startnow from '../../../../images/home/startNow.svg'
 import startvector from '../../../../images/home/startVector.svg'
 import {UIButton} from "../../../UI/Button/UIButton";
 import {useTranslation} from "react-i18next";
+import {Link} from "gatsby";
 
 const Results = () => {
     const {t} = useTranslation();
@@ -56,8 +57,9 @@ const Results = () => {
                     </div>
                 </div>
                 <div className={styles.buttonsBlock}>
-                    <UIButton blueLight>Записаться на консультацию</UIButton>
-                    <UIButton white>Посмотреть программы</UIButton>
+                    <UIButton blueLight>{t('home.btn1')}</UIButton>
+
+                    <UIButton white><Link to={'/courses'}>{t('home.btn2')}</Link></UIButton>
                 </div>
             </div>
             <p className={styles.textComforter}>{t('home.block4.comforter')}</p>

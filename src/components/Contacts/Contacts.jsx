@@ -52,7 +52,7 @@ const Contacts = () => {
 
     return (
         <div className={styles.root}>
-            <h2 className={styles.title}>контакты</h2>
+            <h2 className={styles.title}>{t('contacts.title')}</h2>
             <div className={styles.box}>
                 <img className={styles.phone} src={phone} alt="phoneImg"/>
                 <div className={styles.row}>
@@ -60,7 +60,7 @@ const Contacts = () => {
                         <img src={building} alt="img"/>
                     </div>
                     <div className={`${styles.column} ${styles.columnRight}`}>
-                        <p className="text36">Для консультаций по релокации, видам внж в Нидерландах, стартап визам, стратегии переезда в Нидерланды, запуску бизнеса.</p>
+                        <p className="text36">{t('contacts.text1')}</p>
                         <ul>
                             <li className="text24">email: skilltostart@gmail.com</li>
                             <li className="text24">WhatsApp: +31642571679</li>

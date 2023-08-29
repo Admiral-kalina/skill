@@ -13,7 +13,7 @@ const WhyNetherlands = () => {
     return (
         <section className={styles.root}>
             <div className={styles.container}>
-                <h2 className={`${styles.title} text96`}>Почему Нидерланды?</h2>
+                <h2 className={`${styles.title} text96`}>{t('home.why')}</h2>
                 <div className={styles.row}>
                     <div className={styles.column}>
                         <span>1</span>

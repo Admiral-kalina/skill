@@ -39,6 +39,15 @@
   .btnContainer{
     button{
       width: fit-content;
+      padding: 0 50px 0 15px;
+      &::before{
+        top: 51%;
+      }
+      @media screen and (max-width: 1024px){
+        &::before{
+          top: 44%;
+        }
+      }
     }
   }
   h2{

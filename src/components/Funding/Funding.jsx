@@ -65,7 +65,7 @@ export const Funding = () => {
                                     </div>
                                     <div className={`${styles.whiteBtn} ${styles.btnContainer} btnContainer`}>
                                        <Link to={'/'}>
-                                           <UIButton white>{t('funding.box2.btn1')}</UIButton>
+                                           <UIButton white>{t('funding.box2.btn2')}</UIButton>
                                        </Link>
                                     </div>
                                 </div>
