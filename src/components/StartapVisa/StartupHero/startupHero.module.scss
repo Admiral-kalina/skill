@@ -2,9 +2,10 @@
   padding-top: 120px;
   position: relative;
 
-  a{
+  a {
     text-decoration: underline;
   }
+
   .container {
     max-width: 1490px;
     margin: 0 auto;
@@ -18,13 +19,38 @@
     .subtitle {
       text-align: right;
     }
-    .btnContainer{
-      button{
+
+    .btnContainer {
+      a {
+        text-decoration: none;
+      }
+
+      button {
         padding: 0 50px 0 20px;
         width: fit-content;
         white-space: nowrap;
       }
+
+      @media screen and (max-width: 768px) {
+        padding: 0;
+        button {
+          font-size: 14px;
+          padding: 0 20px;
+
+          &::before {
+            display: none;
+          }
+        }
+
+      }
+      @media screen and (max-width: 450px) {
+        button {
+          height: 40px;
+          font-size: 12px;
+        }
+      }
     }
+
   }
 
   .containerBig {
@@ -50,7 +76,6 @@
     display: none;
     position: absolute;
   }
-
 
 
   .leftZeroBlock {
@@ -80,6 +105,7 @@
     background-size: cover;
     padding-bottom: 400px;
     position: relative;
+
     .gray {
       background-color: #ECEAE5;
       padding: 47px 0 120px;
@@ -93,11 +119,13 @@
       background-color: #BAB2A2;
       margin: -70px 235px 0 155px;
       border-radius: 0px 0px 100px 100px;
+
       p {
         margin: 0;
       }
     }
-    img{
+
+    img {
       position: absolute;
       right: 28%;
       transform: translate(50%, 10px);
@@ -105,13 +133,13 @@
     }
 
     @media screen and (max-width: 1440px) {
-      padding-bottom:350px;
+      padding-bottom: 350px;
       .darkGray {
         margin: -60px 120px 0 200px;
         border-radius: 0px 0px 20px 20px;
         padding: 16px 15px 70px;
       }
-      img{
+      img {
         right: 12%;
         transform: translate(50%, 10px);
         bottom: -15px;
@@ -123,8 +151,8 @@
       .darkGray {
         margin: -60px 80px 0;
       }
-      img{
-        transform:scale(0.4);
+      img {
+        transform: scale(0.4);
         right: -10%;
         bottom: -59px;
       }
@@ -134,7 +162,7 @@
       .darkGray {
         margin: -60px 60px 0;
       }
-      img{
+      img {
         bottom: -100px;
       }
     }
@@ -144,7 +172,7 @@
         margin: -60px 30px 0;
         padding: 16px 15px 15px;
       }
-      img{
+      img {
         transform: scale(0.3);
         right: -42%;
         bottom: -200px;
@@ -214,8 +242,8 @@
     align-items: center;
   }
 
-  .library{
-    img{
+  .library {
+    img {
       @media screen and (max-width: 1440px) {
         width: 546.149px;
         height: 540px;
@@ -226,34 +254,36 @@
       }
       @media screen and (max-width: 768px) {
         width: 201px;
-        height: 324px;
+        height: 270px;
       }
       @media screen and (max-width: 450px) {
         width: 144px;
-        height: 300px;
+        height: 220px;
       }
     }
   }
 
-  .conversation{
-    p{
+  .conversation {
+    p {
       padding-left: 20px;
     }
-    img{
+
+    img {
       @media screen and (max-width: 1440px) {
         width: 546.149px;
         height: 442px;
       }
       @media screen and (max-width: 1024px) {
         width: 300px;
+        height: 250px;
       }
       @media screen and (max-width: 768px) {
         width: 200px;
-        height: 300px;
+        height: 150px;
       }
       @media screen and (max-width: 450px) {
         width: 144px;
-        height: 229px;
+        height: 110px;
       }
     }
   }
@@ -266,9 +296,7 @@
     background-image: url("../../../images/startupVisa/planetBg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    @media screen and (max-width: 768px) {
-      padding: 100px 0;
-    }
+
 
     p {
       font-weight: 400;
@@ -292,8 +320,17 @@
       }
       @media screen and (max-width: 450px) {
         transform: scale(0.2);
-        top: 200px;
+        top: 130px;
         right: -146px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      padding: 100px 0;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 100px 0 60px;
+      a{
+        font-size: 12px;
       }
     }
   }

@@ -138,6 +138,7 @@
     row-gap: 37px;
     font-size: 24px;
     button{
+      white-space: nowrap;
       height: 100px;
       text-transform: uppercase;
     }
@@ -145,7 +146,7 @@
       width: 420px;
       row-gap: 26px;
       bottom: -90px;
-      font-size: 20px;
+      font-size: 20px !important;
       button{
         height: 80px;
       }
@@ -154,21 +155,30 @@
       width: 310px;
       row-gap: 26px;
       bottom: -135px;
-      font-size: 16px;
+
       button{
         height: 60px;
       }
+      a{
+        font-size: 16px;
+      }
     }
     @media screen and (max-width: 768px) {
-      font-size: 12px;
+
       width: 220px;
       row-gap: 18px;
+
       button{
         height: 40px;
       }
+      a{
+        font-size: 12px;
+      }
     }
     @media screen and (max-width: 450px) {
-      font-size: 10px;
+      a{
+        font-size: 10px;
+      }
       width: 195px;
       row-gap: 14px;
       bottom: -110px;

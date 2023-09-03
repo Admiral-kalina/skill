@@ -14,6 +14,7 @@ import girlBottom from "../../../images/startupVisa/girlBottom.png"
 import planet from "../../../images/startupVisa/planet.png"
 import calendar from "../../../images/startupVisa/calendar.png"
 import {useTranslation} from "react-i18next";
+import {Link} from "gatsby";
 
 
 export const StartupHero = () => {
@@ -47,10 +48,10 @@ export const StartupHero = () => {
                     <div className={`${styles.row} ${styles.library}`}>
                         <img src={library} alt="library"/>
                         <div>
-                            <p className={`text36 ${styles.text36}`}>{t('startup.box2.text1')}</p>
-                            <p className={`text36 ${styles.text36}`}>{t('startup.box2.text2')}</p>
-                            <p className={`text36 ${styles.text36}`}>{t('startup.box2.text3')}</p>
-                            <p className={`text36 ${styles.text36}`}>{t('startup.box2.text4')}</p>
+                            <p className={`text36 ${styles.text36}`}>{t('startup.box3.text1')}</p>
+                            <p className={`text36 ${styles.text36}`}>{t('startup.box3.text2')}</p>
+                            <p className={`text36 ${styles.text36}`}>{t('startup.box3.text3')}</p>
+                            <p className={`text36 ${styles.text36}`}>{t('startup.box3.text4')}</p>
                         </div>
                     </div>
                 </div>
@@ -60,7 +61,7 @@ export const StartupHero = () => {
                     <p className="text36">{t('startup.box3.text5')}</p>
                     <p className="text36">{t('startup.box3.text6')} <a href="https://forms.gle/ZmStFjPbZSeE1j4J6">https://forms.gle/ZmStFjPbZSeE1j4J6</a></p>
                     <div className={`btnContainer ${styles.btnContainer}`}>
-                        <UIButton blueLight>{t('startup.box3.btn1')}</UIButton>
+                        <Link to={''}><UIButton blueLight>{t('startup.box3.btn1')}</UIButton></Link>
                     </div>
                     <img src={planet} alt="img"/>
                 </div>

@@ -42,7 +42,7 @@ export const Funding = () => {
                         <div className={styles.container}>
                             <div className={styles.textBlockFull}>
                                 <p className="text36">
-                                    <span>{t('funding.box2.text3.span1')}</span> {t('funding.box2.text3.text1')}<br/> {t('funding.box2.text3.text1')}
+                                    <span>{t('funding.box2.text3.span1')}</span> {t('funding.box2.text3.text1')}<br/> {t('funding.box2.text3.text2')}
                                 </p>
                                 <p className="text36">{t('funding.box2.text4.text1')}
                                     <span>{t('funding.box2.text4.span1')}</span>{t('funding.box2.text4.text2')} </p>
@@ -55,7 +55,7 @@ export const Funding = () => {
                                 <p className="text36">
                                     <span>{t('funding.box2.text5.span1')}</span> {t('funding.box2.text5.text1')}</p>
                                 <p className="text36">{t('funding.box2.text6.text1')}
-                                    <span>{t('funding.box2.text6.text1')}</span> {t('funding.box2.text6.text2')}<br/> {t('funding.box2.text6.text3')}
+                                    <span> {t('funding.box2.text6.span1')}</span> {t('funding.box2.text6.text2')}<br/> {t('funding.box2.text6.text3')}
                                 </p>
                                 <div className={styles.btns}>
                                     <div className={`${styles.btnContainer} btnContainer`}>

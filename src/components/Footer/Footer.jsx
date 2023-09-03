@@ -60,20 +60,20 @@ const Footer = ({withPlanes}) => {
                 </a>
                 <div className={styles.contactinfo}>
                     <p>Contact Info</p>
-                    <a href="#">skilltostart@gmail.com</a>
+                    <a href="mailto:skilltostart@gmail.com">skilltostart@gmail.com</a>
                 </div>
                 <p className={styles.copyright}>© Skill to Start 2023 All rights reserved</p>
                 <div className={styles.social}>
-                    <a href="#">
+                    <a href="https://www.facebook.com/skilltostart">
                         <img className={styles.socialicon} src={facebook} alt=""/>
                     </a>
-                    <a href="#">
+                    <a href="https://www.youtube.com/@skilltostart">
                         <img className={styles.socialicon} src={youtube} alt=""/>
                     </a>
                     <a href="#">
                         <img className={styles.socialicon} src={instagram} alt=""/>
                     </a>
-                    <a href="#">
+                    <a href="https://t.me/skilltostart">
                         <img className={styles.socialicon} src={telegram} alt=""/>
                     </a>
                 </div>

@@ -42,7 +42,7 @@ const Results = () => {
                             {t('home.block4.box3.text1')}
                         </p>
                         <p className={styles.text}>
-                            {t('home.block4.box3.text2')}.
+                            {t('home.block4.box3.text2')}
                         </p>
                     </div>
                 </div>
@@ -57,9 +57,9 @@ const Results = () => {
                     </div>
                 </div>
                 <div className={styles.buttonsBlock}>
-                    <UIButton blueLight>{t('home.btn1')}</UIButton>
+                    <Link><UIButton blueLight>{t('home.btn1')}</UIButton></Link>
 
-                    <UIButton white><Link to={'/courses'}>{t('home.btn2')}</Link></UIButton>
+                    <Link to={'/courses'}><UIButton white>{t('home.btn2')}</UIButton></Link>
                 </div>
             </div>
             <p className={styles.textComforter}>{t('home.block4.comforter')}</p>

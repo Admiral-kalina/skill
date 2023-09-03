@@ -191,7 +191,7 @@ const Instruments = () => {
                         </div>
                         <div className={styles.rowBottom}>
                             <div className={styles.columnFirst}>
-                                <p className="text32">{t('start.box7.text4.text1')}<span>{t('start.box7.text4.span1')}</span> {t('start.box7.text4.text2')}</p>
+                                <p className="text32">{t('start.box7.text4.text1')} <span>{t('start.box7.text4.span1')}</span> {t('start.box7.text4.text2')}</p>
                             </div>
                             <div className={styles.columnSecond}>
                                 <p className="text32"><span>{t('start.box7.text5.span1')}</span> {t('start.box7.text5.text1')}</p>

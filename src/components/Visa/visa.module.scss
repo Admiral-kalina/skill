@@ -1,17 +1,20 @@
-.root{
+.root {
   padding: 150px 0 450px;
-  p{
+
+  p {
     font-weight: 300;
   }
 
-  .hero{
+  .hero {
     background-image: url("../../images/visa/heroBg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    h2{
+
+    h2 {
       text-align: center;
     }
-    .subtitle{
+
+    .subtitle {
       font-size: 32px;
       font-style: italic;
       font-weight: 500;
@@ -30,27 +33,41 @@
       }
     }
   }
-  .container{
+
+  .container {
     max-width: 1550px;
     margin: 0 auto;
     padding: 0 15px;
   }
 
-  .btnContainer{
-    button{
+  .btnContainer {
+    button {
       width: fit-content;
       padding: 0 50px 0 15px;
-      &::before{
+      &::before {
         top: 51%;
       }
-      @media screen and (max-width: 1024px){
-        &::before{
+    }
+    @media screen and (max-width: 1024px){
+      button{
+        &::before {
           top: 44%;
         }
       }
     }
+    @media screen and (max-width: 768px){
+      padding: 0;
+      button{
+        padding: 0 15px 0 15px;
+        height: 32px;
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
-  h2{
+
+  h2 {
     text-transform: uppercase;
   }
 
@@ -59,65 +76,72 @@
     align-items: center;
   }
 
-  .bonus{
+  .bonus {
+
     position: relative;
-    .dartImg{
+
+    .dartImg {
       position: absolute;
       max-width: 200px;
       max-height: 200px;
       right: 0;
       top: -66px;
     }
-    @media screen and (max-width: 1440px){
-      .dartImg{
-      transform:scale(.6);
-      }
-    }
-    @media screen and (max-width: 1024px){
-      .dartImg{
-        transform:scale(.5);
-      }
-    }
-    @media screen and (max-width: 768px){
-      .dartImg{
-        transform:scale(.4);
-        top: -82px;
-      }
-    }
-    @media screen and (max-width: 768px){
-      .dartImg{
-        transform:scale(.4);
-        top: -82px;
-      }
-    }
-    @media screen and (max-width: 550px){
-      .dartImg{
-        transform:scale(.3);
-        top: -108px;
-        right:-60px;
-      }
-    }
-    @media screen and (max-width: 550px){
-      .dartImg{
 
-        right:-25px;
+    @media screen and (max-width: 1440px) {
+      .dartImg {
+        transform: scale(.6);
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .dartImg {
+        transform: scale(.5);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .dartImg {
+        transform: scale(.4);
+        top: -82px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .dartImg {
+        transform: scale(.4);
+        top: -82px;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .dartImg {
+        transform: scale(.3);
+        top: -108px;
+        right: -60px;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .dartImg {
+
+        right: -25px;
       }
     }
   }
+
   .containerBig {
     max-width: 1734px;
     margin: 0 auto;
   }
 
-  .yellow{
+  .yellow {
     background-color: #FFC107;
     padding-bottom: 20px;
-    p{
+
+    p {
       margin: 0;
     }
+
     p:not(:first-child) {
       position: relative;
       padding-left: 30px;
+
       &::before {
         content: '.';
         position: absolute;
@@ -126,14 +150,23 @@
       }
     }
   }
-span{
-  font-weight: 500;
-}
-  .library{
-    p{
+
+  span {
+    font-weight: 500;
+  }
+
+  .library {
+    .title {
+      &::before {
+        display: none;
+      }
+    }
+
+    p {
       padding-left: 30px;
       margin-left: 20px;
     }
+
     p:not(:first-child) {
       position: relative;
 
@@ -144,7 +177,8 @@ span{
         top: -4px;
       }
     }
-    img{
+
+    img {
       @media screen and (max-width: 1440px) {
         width: 546.149px;
         height: 540px;
@@ -162,46 +196,56 @@ span{
         height: 300px;
       }
     }
+
     @media(max-width: 768px) {
-     p{
-       padding-left: 15px;
-       margin-left: 5px;
-     }
+      p {
+        padding-left: 15px;
+        margin-left: 5px;
+      }
     }
   }
-  .full{
+
+  .full {
     position: relative;
     padding: 150px 0 226px 0px;
     background-image: url("../../images/visa/bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
 
-    .textComforter{
+    p {
+      color: #620000;
+      font-weight: 400;
+    }
+
+    .textComforter {
       position: absolute;
       bottom: 70px;
       right: 0;
-      &::before{
-        right: 100% ;
+
+      &::before {
+        right: 100%;
         left: auto;
       }
-      @media screen and (max-width: 1024px){
+
+      @media screen and (max-width: 1024px) {
         bottom: 20px;
         transform: scale(0.33);
         right: -100px;
       }
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 768px) {
         bottom: 5px;
       }
-      @media screen and (max-width: 550px){
+      @media screen and (max-width: 550px) {
         bottom: 5px;
         transform: scale(0.23);
         right: -150px;
       }
-      @media screen and (max-width: 450px){
+      @media screen and (max-width: 450px) {
         bottom: -15px;
 
       }
     }
+
     img {
       position: absolute;
       @media screen and (max-width: 1100px) {
@@ -215,39 +259,41 @@ span{
 
       }
     }
+
     @media screen and (max-width: 1440px) {
       padding: 130px 0 220px 0px;
-      img{
+      img {
         transform: scale(.8);
       }
     }
     @media screen and (max-width: 1024px) {
       padding: 110px 0 160px 0px;
-     img{
-       bottom: -250px;
-       transform: scale(.6);
-     }
+      img {
+        bottom: -250px;
+        transform: scale(.6);
+      }
     }
     @media screen and (max-width: 768px) {
       padding: 80px 0 120px 0px;
-     img{
-       transform: scale(.4);
-     }
+      img {
+        transform: scale(.4);
+      }
     }
     @media screen and (max-width: 450px) {
       padding: 80px 0 80px 0px;
-      img{
+      img {
         transform: scale(.2);
       }
     }
   }
-  @media screen and (max-width: 1024px){
+
+  @media screen and (max-width: 1024px) {
     padding: 130px 0 200px;
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     padding: 80px 0 150px;
   }
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 450px) {
     padding: 80px 0 50px;
   }
 }

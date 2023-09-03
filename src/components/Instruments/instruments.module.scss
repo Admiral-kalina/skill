@@ -186,6 +186,12 @@
     @media screen and (max-width: 768px) {
       .row {
         margin-top: 20px;
+        padding: 0;
+      }
+      .column {
+        &:before {
+          left: -10px;
+        }
       }
       .instrumentsTitle {
         margin-top: 36px;
@@ -205,7 +211,6 @@
       border-radius: 50px;
       background-color: #E1FAFA;
       padding: 60px 57px 155px 57px;
-
     }
 
     .bonusContent {
@@ -294,7 +299,7 @@
     @media screen and (max-width: 768px) {
       margin-top: 40px;
       .innerContainer {
-        padding: 45px 57px 52px 57px;
+        padding: 45px 20px 52px 20px;
       }
       .girlTop {
         top: -232px;

@@ -160,6 +160,15 @@
   width: 27px;
 }
 
+@media screen and (max-width: 1360px) {
+  .navLinks {
+    li {
+      font-size: 22px;
+      margin-right: 20px;
+    }
+  }
+
+}
 
 @media screen and (max-width: 1220px) {
   .languageMenu{
@@ -178,14 +187,14 @@
 }
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1120px) {
   .languageMenu{
     font-size: 18px;
   }
   .logo {
     align-self: center;
-    width: 89px;
-    height: 57px;
+    width: 99px;
+    height: 67px;
   }
   .headerBlock {
     padding: 0 35px;
@@ -204,9 +213,26 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+
+
+@media screen and (max-width: 850px) {
   .languageMenu {
     margin-right: 20px;
+  }
+  a{
+    font-size: 16px;
+  }
+  .navLinks {
+    padding: 0 0 0 15px;
+
+    li {
+      white-space: nowrap;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-right: 15px;
+    }
   }
 }
 
