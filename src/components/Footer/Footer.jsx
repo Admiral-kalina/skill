@@ -70,7 +70,7 @@ const Footer = ({withPlanes}) => {
                     <a href="https://www.youtube.com/@skilltostart">
                         <img className={styles.socialicon} src={youtube} alt=""/>
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/skill_to_start/">
                         <img className={styles.socialicon} src={instagram} alt=""/>
                     </a>
                     <a href="https://t.me/skilltostart">
