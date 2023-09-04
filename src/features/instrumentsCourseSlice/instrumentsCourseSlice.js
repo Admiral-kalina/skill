@@ -26,7 +26,7 @@ export const instrumentCourseSlice = createSlice({
         })
         builder.addCase(fetchInstrumentCource.fulfilled, (state, action) => {
             state.isLoading = false
-            console.log(action.payload)
+            console.log('SS',action.payload)
             state.instrumentPost = action.payload.data
         })
         builder.addCase(fetchInstrumentCource.rejected, (state, action) => {

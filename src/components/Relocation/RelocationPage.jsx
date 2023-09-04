@@ -5,15 +5,17 @@ import {Businnes} from "./components/Businnes/Businnes";
 import Year from "./components/Year/Year";
 import Consultation from "./components/Consultation/Consultation";
 import Footer from "../Footer/Footer";
+import {useSelector} from "react-redux";
 
 export const RelocationPage = () => {
+    const {second} = useSelector(state => state.links.links);
     return (
         <div>
             <Programs/>
-            <Visa/>
+            <Visa link={second}/>
             <Businnes/>
             <Year/>
-            <Consultation/>
+            <Consultation link={second}/>
         </div>
     );
 };

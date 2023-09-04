@@ -18,16 +18,20 @@ import * as styles from "./home.module.scss"
 
 import avatar from "../../images/courses/avatar.png";
 import Footer from "../Footer/Footer";
+import Loader from "../UI/Loader/Loader";
+import {useSelector} from "react-redux";
 
 
 
 export const Home = () => {
+    const {first} = useSelector(state => state.links.links);
+
     return (
         <div className={styles.home}>
-            <Relocation/>
+            <Relocation link={first}/>
             <WhatWeCan/>
             <Business/>
-            <Results/>
+            <Results link={first}/>
             <Products/>
             <ForClients/>
             <WhyNetherlands/>

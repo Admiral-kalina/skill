@@ -9,7 +9,7 @@ import {UIButton} from "../../../UI/Button/UIButton";
 import {useTranslation} from "react-i18next";
 import {Link} from "gatsby";
 
-const Results = () => {
+const Results = ({link}) => {
     const {t} = useTranslation();
 
     return (
@@ -57,7 +57,7 @@ const Results = () => {
                     </div>
                 </div>
                 <div className={styles.buttonsBlock}>
-                    <Link><UIButton blueLight>{t('home.btn1')}</UIButton></Link>
+                    <Link to={link}><UIButton blueLight>{t('home.btn1')}</UIButton></Link>
 
                     <Link to={'/courses'}><UIButton white>{t('home.btn2')}</UIButton></Link>
                 </div>

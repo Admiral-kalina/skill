@@ -16,6 +16,7 @@ import {fetchFundingYoutube} from "../../features/fundingYoutubeSlice/fundingYou
 import FundingYoutube from "./FundingYoutube";
 
 export const Funding = () => {
+    const {second} = useSelector(state => state.links.links);
     const {t} = useTranslation();
 
     return (
@@ -59,7 +60,7 @@ export const Funding = () => {
                                 </p>
                                 <div className={styles.btns}>
                                     <div className={`${styles.btnContainer} btnContainer`}>
-                                        <Link to={'/'}>
+                                        <Link to={second}>
                                             <UIButton blueLight>{t('funding.box2.btn1')}</UIButton>
                                         </Link>
                                     </div>

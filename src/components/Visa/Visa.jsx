@@ -10,9 +10,11 @@ import dart from "../../images/visa/dart.png"
 import girl from "../../images/visa/girl.png";
 import library from "../../images/startupVisa/library.png";
 import {Link} from "gatsby";
+import {useSelector} from "react-redux";
 
 
 const Visa = () => {
+    const {third} = useSelector(state => state.links.links);
     const {t} = useTranslation();
 
     return (
@@ -78,7 +80,7 @@ const Visa = () => {
                 <div className={styles.container}>
                     <p className="text36">{t('visa.box3.text6')}</p>
                     <div className={`btnContainer ${styles.btnContainer}`}>
-                       <Link to={'/'}> <UIButton blueLight>{t('visa.box3.btn1')}</UIButton></Link>
+                       <Link to={third}> <UIButton blueLight>{t('visa.box3.btn1')}</UIButton></Link>
                     </div>
                     <img src={girl} alt="img"/>
                 </div>

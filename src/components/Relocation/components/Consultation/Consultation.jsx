@@ -4,8 +4,9 @@ import React from 'react';
 import * as styles from "./consultation.module.scss"
 import {UIButton} from "../../../UI/Button/UIButton";
 import {useTranslation} from "react-i18next";
+import {Link} from "gatsby";
 
-const Consultation = () => {
+const Consultation = ({link}) => {
     const {t} = useTranslation();
     return (
         <div className={styles.root}>
@@ -25,7 +26,7 @@ const Consultation = () => {
                     <p className="text36">{t('relocation.individual.text10')}</p>
                     <p className="text36">{t('relocation.individual.text11')}</p>
                     <div className={`btnContainer ${styles.btnContainer}`}>
-                        <UIButton blueLight>{t('relocation.individual.btn1')}</UIButton>
+                        <Link to={link}><UIButton blueLight>{t('relocation.individual.btn1')}</UIButton></Link>
                     </div>
                 </div>
             </div>

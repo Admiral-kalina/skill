@@ -32,8 +32,15 @@ import {addUserCurse} from "../../features/userSlice/userSlice";
 const Instruments = () => {
     const dispatch = useDispatch();
     const {t} = useTranslation();
+    const {fourth} = useSelector(state => state.links.links);
     const {language} = useSelector(store => store.user.user);
 
+    const a = useSelector(store => store)
+
+    console.log('AA',a)
+
+    const {instrumentPost, isLoading, error} = useSelector(res => res.instrumentCourse)
+    const course = instrumentPost.attributes
     const handlePayClick = () => {
         dispatch(addUserCurse(course))
         navigate('/checkout')
@@ -42,11 +49,6 @@ const Instruments = () => {
     useEffect(() => {
         dispatch(fetchInstrumentCource(language.toLowerCase()))
     },[language])
-
-
-    const {instrumentPost, isLoading, error} = useSelector(res => res.instrumentCourse)
-
-    const course = instrumentPost.attributes
 
 
     if (isLoading) {
@@ -75,10 +77,10 @@ const Instruments = () => {
                     <p className="text36">{t('start.box1.text3')}</p>
                     <div className={styles.btnBlock}>
                         <div className="btnContainer">
-                            <UIButton blueLight>{t('start.box1.btn1')}</UIButton>
+                           <Link to={fourth}> <UIButton blueLight>{t('start.box1.btn1')}</UIButton></Link>
                         </div>
                         <div className="btnContainer">
-                            <UIButton onClick={handlePayClick} blueLight>{t('start.box1.btn2')}</UIButton>
+                           <Link to={'#'}> <UIButton onClick={handlePayClick} blueLight>{t('start.box1.btn2')}</UIButton></Link>
                         </div>
                     </div>
                 </div>

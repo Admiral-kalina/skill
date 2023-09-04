@@ -9,6 +9,7 @@ import feedbackSlice from "../features/feedback/feedbackSlice";
 import instagramSlice from "../features/instagramSlice/instagramSlice";
 import fundingYoutubeSlice from "../features/fundingYoutubeSlice/fundingYoutubeSlice";
 import instrumentCourseSlice from "../features/instrumentsCourseSlice/instrumentsCourseSlice";
+import linksSlice from "../features/linkSlice/linkSlice";
 
 
 export const store = configureStore({
@@ -22,5 +23,6 @@ export const store = configureStore({
         instagram:instagramSlice,
         fundingYoutube:fundingYoutubeSlice,
         instrumentCourse:instrumentCourseSlice,
+        links: linksSlice,
     },
 })

@@ -15,9 +15,11 @@ import planet from "../../../images/startupVisa/planet.png"
 import calendar from "../../../images/startupVisa/calendar.png"
 import {useTranslation} from "react-i18next";
 import {Link} from "gatsby";
+import {useSelector} from "react-redux";
 
 
 export const StartupHero = () => {
+    const {first} = useSelector(state => state.links.links);
     const {t} = useTranslation();
 
     return (
@@ -61,7 +63,7 @@ export const StartupHero = () => {
                     <p className="text36">{t('startup.box3.text5')}</p>
                     <p className="text36">{t('startup.box3.text6')} <a href="https://forms.gle/ZmStFjPbZSeE1j4J6">https://forms.gle/ZmStFjPbZSeE1j4J6</a></p>
                     <div className={`btnContainer ${styles.btnContainer}`}>
-                        <Link to={''}><UIButton blueLight>{t('startup.box3.btn1')}</UIButton></Link>
+                        <Link to={first}><UIButton blueLight>{t('startup.box3.btn1')}</UIButton></Link>
                     </div>
                     <img src={planet} alt="img"/>
                 </div>

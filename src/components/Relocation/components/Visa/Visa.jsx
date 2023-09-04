@@ -8,8 +8,10 @@ import meeting from "../../../../images/relocation/visa.png"
 import {UIButton} from "../../../UI/Button/UIButton";
 import {Link} from "gatsby";
 import {useTranslation} from "react-i18next";
+import {useSelector} from "react-redux";
 
-export const Visa = () => {
+export const Visa = ({link}) => {
+
     const {t} = useTranslation();
 
     return (
@@ -21,7 +23,7 @@ export const Visa = () => {
                     <p className="text36">{t('relocation.startup.text2')}</p>
                     <p className="text36">{t('relocation.startup.text3')}</p>
                     <div className={styles.btnsBlock}>
-                       <Link to={'/startupviza'}><UIButton blueLight>{t('relocation.startup.btn1')}</UIButton></Link>
+                       <Link to={link}><UIButton blueLight>{t('relocation.startup.btn1')}</UIButton></Link>
                     </div>
                     <img src={meeting} alt="meeting"/>
                 </div>

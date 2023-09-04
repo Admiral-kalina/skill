@@ -13,11 +13,14 @@ import Loader from "../../UI/Loader/Loader";
 
 
 const YoutubeList = ({mainPage}) => {
+    const a = useSelector(store => store)
     const {language} = useSelector(store => store.user.user);
     const {list, isLoading, error} = useSelector(res => res.youTube)
 
     const dispatch = useDispatch()
-
+    console.log(
+        a
+    )
     useEffect(() => {
         dispatch(fetchYoutube(language.toLowerCase()))
     }, [language])

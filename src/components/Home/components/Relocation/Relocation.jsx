@@ -9,9 +9,11 @@ import * as styles from "./relocation.module.scss";
 //images
 import bg from "../../../../images/home/relocationBg.png";
 import {useTranslation} from "react-i18next";
+import {useSelector} from "react-redux";
+import {Link} from "gatsby";
 
 
-const Relocation = () => {
+const Relocation = ({link}) => {
     const {t} = useTranslation()
 
     return (
@@ -22,7 +24,7 @@ const Relocation = () => {
                <div className={styles.body}>
                    <p>{t('home.subtitle.part1')}<br/>{t('home.subtitle.part2')}</p>
                    <div className={styles.button}>
-                       <UIButton blueRounded>{t('home.btn1')}</UIButton>
+                       <Link to={link}><UIButton blueRounded>{t('home.btn1')}</UIButton></Link>
                    </div>
                </div>
            </div>
